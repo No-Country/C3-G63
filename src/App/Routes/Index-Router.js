@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from '../components/Acreditar/Login/Login';
+import FormLogin from '../Login/formLogin';
+import Login from '../Login/Login';
 import Page from '../Page/page';
 
 export function App() {
@@ -9,6 +10,9 @@ export function App() {
     <Login/>
       <Routes>
         <Route path="/" element={<Page />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/formLogin" element={<FormLogin/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,18 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import login from './login.module.css'
+import logo from '../'
+
 
 
 const Login = () => {
-  return <div>
+  return <div className={login}>
 
-    <div className={login}>
+    <div>
         <h2>Logo</h2>
     </div>
     <div>
-      <h1>Ingresa</h1>
+      
     </div>
     <div>
-      <button>Login</button><br/>
+      <Link to={`/formLogin`}><button>Login</button></Link><br/>
       <button>Sign in</button>
     </div>
   </div>
