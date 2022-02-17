@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-
+import React from 'react';
+import login from './login.module.css'
 
 
 const Login = () => {
-
-
-
   return <div>
 
-    <div>
+    <div className={login}>
         <h2>Logo</h2>
     </div>
     <div>
-      <h1>Ingresaaa</h1>
+      <h1>Ingresa</h1>
     </div>
     <div>
       <button>Login</button><br/>
