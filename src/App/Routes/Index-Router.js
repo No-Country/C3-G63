@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom';
 import SignUp from '../components/SignUp/SignUp';
 import FormLogin from '../Login/formLogin';
 import Ingresa from '../Login/Ingresa';
@@ -9,6 +9,7 @@ export function App() {
   return (
     <BrowserRouter>
     <Ingresa />
+    <Switch>
       <Routes>
         <Route path="/" element={<Page />} />
       </Routes>
@@ -18,6 +19,7 @@ export function App() {
       <Routes>
         <Route exact path ="/Registro" element={<SignUp/>} />
       </Routes>
+    </Switch>
     </BrowserRouter>
   );
 }

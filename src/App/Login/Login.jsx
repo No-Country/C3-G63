@@ -1,5 +1,6 @@
 import React from 'react';
-import prueba from './login.module.css'
+import  './login.scss'
+
 
 
 
@@ -8,7 +9,7 @@ import prueba from './login.module.css'
 
 const Login = () => {
   return <div>
-    <div className={prueba}>
+    <div className='prueba'>
       <h1>Esto es un login</h1>
     </div>
     <div>

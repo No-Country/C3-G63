@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
+
 const Ingresa = () => {
   return (
     <div>
-        <div>
+        <div className='prueba'>
             Logo
         </div>
         <div>
