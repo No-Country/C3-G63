@@ -1,9 +1,12 @@
-import './App.css';
+
 import WalletPage from './Pages/Wallet/WalletPage';
+import logo from "./Assets/Frame.png"
 
 function App() {
   return (
+    <>
     <WalletPage />
+    </>
   );
 }
 
