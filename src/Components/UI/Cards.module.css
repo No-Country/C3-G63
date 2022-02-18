@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    
+}
+
+.cardCtn {
+    border: 1px solid #C4C4C4;
+    display: flex;
+    width: 320px;
+    height: 121px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.cryptoCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.cryptoCtn p {
+    margin-top: 5px;
+}
+
+.btnCtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    
+}
+
+.btnCtn button {
+    border: none;
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: #F6AA47;
+}
