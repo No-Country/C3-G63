@@ -7,20 +7,22 @@ import WalletPage from '../../Pages/Wallet/WalletPage';
 
 
 import Page from '../Page/page';
+import { AcreditarView } from '../components/Acreditar/acreditarView';
 
 export function App() {
   return (
     <BrowserRouter>
 
-      
+
       <Routes>
         <Route path="/" element={<Page />} />
+        <Route path="/acreditar" element={<AcreditarView />} />
         <Route path="/portfolio" element={<WalletPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<SignUp />} />
-        <Route path="/ingreso" element={<SignIn />}/>
+        <Route path="/ingreso" element={<SignIn />} />
       </Routes>
-      
+
     </BrowserRouter>
   );
 }
