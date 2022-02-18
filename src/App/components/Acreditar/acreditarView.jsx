@@ -21,7 +21,6 @@ export const AcreditarView = props => {
         <div className='Container-HEADER'>
           <div className='Container-Acreditar-Left'>
             <img src={flecha} alt="" />
-            <img className='logo' src={Frame} alt="" />
           </div>
           <div className='Container-avatar'>
             <h6>Arleys Gatica</h6>
