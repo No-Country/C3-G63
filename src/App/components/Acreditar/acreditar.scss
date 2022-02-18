@@ -5,11 +5,11 @@
 
 .Container-HEADER {
   border: 1px solid rgb(0, 0, 0);
-  width: 90vw;
+  width: 100vw;
   height: 15vh;
   display: flex;
   margin: auto;
-  margin-top: 10px;
+  background: #2d9cdb;
 }
 
 .Container-avatar {
@@ -17,23 +17,26 @@
   width: 87vw;
   height: 12vh;
   justify-content: end;
+  align-items: flex-end;
   margin: 0 auto;
+  flex-direction: column;
 }
 
 h6 {
   font-size: 1rem;
   font-weight: bold;
   margin: 5px;
-  position: fixed;
+  cursor: pointer;
 }
 
 .Container-avatar img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-top: 30px;
+  margin-top: 5px;
   object-fit: cover;
   margin-inline: 10%;
+  cursor: pointer;
 }
 
 .Container-Acreditar-Left {
@@ -49,6 +52,7 @@ h6 {
   margin-top: 27px;
   margin-left: 15px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .logo img {
@@ -58,6 +62,7 @@ h6 {
   margin-top: 27px;
   margin-left: 15px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .Container-info {
@@ -97,7 +102,7 @@ h1 {
   height: 10vh;
   border-radius: 10px;
   border: none;
-  background-color: #2d9cdb;
+  background-color: #1395e0;
   color: #000;
   font-size: 1.2rem;
   font-weight: bold;
@@ -116,7 +121,7 @@ h1 {
   height: 10vh;
   border-radius: 10px;
   border: none;
-  background-color: #2d9cdb;
+  background-color: #1395e0;
   color: #000;
   font-size: 1.2rem;
   font-weight: bold;

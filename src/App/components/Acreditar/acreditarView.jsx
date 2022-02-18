@@ -8,7 +8,6 @@ export const AcreditarView = props => {
   const {
     acreditar,
     configuracion,
-
     name,
     setAcreditar,
     setConfiguracion,
