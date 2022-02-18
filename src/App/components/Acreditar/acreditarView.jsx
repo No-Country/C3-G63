@@ -1,6 +1,6 @@
 import React from 'react';
 import flecha from '../../../Images/flecha.png';
-import logo from '../../../Images/logo.png';
+import Frame from '../../../Images/Frame.png';
 import usuario from '../../../Images/usuario.png';
 import './acreditar.scss';
 
@@ -21,7 +21,7 @@ export const AcreditarView = props => {
         <div className='Container-HEADER'>
           <div className='Container-Acreditar-Left'>
             <img src={flecha} alt="" />
-            <img className='logo' src={logo} alt="" />
+            <img className='logo' src={Frame} alt="" />
           </div>
           <div className='Container-avatar'>
             <h6>Arleys Gatica</h6>
