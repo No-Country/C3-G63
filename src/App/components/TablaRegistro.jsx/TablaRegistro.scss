@@ -1,0 +1,84 @@
+$main-color: #009640;
+$secondary-color: #1D1D1B;
+$light-color: #C4C4C4;
+$test-color: #FDF4DD;
+$text-color-dark: #000000;
+$text-color-light: #FFFFFF;
+
+
+$large-font-size: 1.5rem;
+$normal-font-size: 1rem;
+$tiny-font-size: 0.6rem;
+
+/* MAIN (RANKING CRYPTO) */
+
+.section {
+    padding: 2rem 0 2rem;
+}
+
+.section__title {
+    width: 100%;
+    font-size: $large-font-size;
+    text-transform: uppercase;
+    color: $main-color;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 1.5rem;
+    border: none;
+    background: $text-color-light;
+    border-radius: 100%;
+}
+
+.section__height {
+    height: 100vh;
+}
+
+/* TABLE */
+
+main {
+    padding: 1em;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+
+th {
+    background-color: $main-color;
+    color: $light-color;
+    font-weight: bold;
+}
+
+td, th {
+    padding: 16px;
+    border: 1px solid $main-color;
+    text-align: center;
+    content: 10px;
+}
+
+.second-column {
+    img {
+        cursor: pointer;
+    }
+}
+
+
+/* MEDIA QUERIES */
+
+/* SMALL DEVICES */
+@media screen and (max-width: 767px) {
+    .nav__name{
+        display: none;
+    }
+
+    .first-column,
+    .six-column,
+    .seven-column,
+    .eight-column{
+        display: none;
+    }
+}

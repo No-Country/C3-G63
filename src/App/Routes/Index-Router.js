@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from '../components/Acreditar/Login/Login';
-import Page from '../Page/page';
+import Home from '../Home/Home';
 
 export function App() {
   return (
     <BrowserRouter>
     <Login/>
       <Routes>
-        <Route path="/" element={<Page />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
