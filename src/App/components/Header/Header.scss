@@ -11,6 +11,46 @@ $large-font-size: 1.5rem;
 $normal-font-size: 1rem;
 $tiny-font-size: 0.6rem;
 
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 3rem 0 0 0;
+    font-size: $normal-font-size;
+    background-color: $light-color;
+    color: $text-color-dark;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav__icon {
+    max-width: 100%;
+    height: auto;
+    width: 35px;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 /* HEADER */
 
 .header {
@@ -22,6 +62,7 @@ $tiny-font-size: 0.6rem;
     z-index: 10;
     transition: .4s;
 }
+
 
 /* NAV */
 
@@ -76,4 +117,3 @@ $tiny-font-size: 0.6rem;
 .nav__item {
     padding: 0 10px;
 }
-

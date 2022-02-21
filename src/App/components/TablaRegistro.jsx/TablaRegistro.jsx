@@ -38,7 +38,7 @@ const TablaRegistro = () => {
                             <img src="" alt=""/>
                         </td>
                         <td className="eight-column">
-                            <a href="">BUY</a>
+                            <a>BUY</a>
                         </td>
                     </tr>
                     <tr>
@@ -56,7 +56,7 @@ const TablaRegistro = () => {
                             <img src="" alt=""/>
                         </td>
                         <td className="eight-column">
-                            <a href="">BUY</a>
+                            <a>BUY</a>
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +74,7 @@ const TablaRegistro = () => {
                             <img src="" alt=""/>
                         </td>
                         <td className="eight-column">
-                            <a href="">BUY</a>
+                            <a>BUY</a>
                         </td>
                     </tr>
                     <tr>
@@ -92,7 +92,7 @@ const TablaRegistro = () => {
                             <img src="" alt=""/>
                         </td>
                         <td className="eight-column">
-                            <a href="">BUY</a>
+                            <a>BUY</a>
                         </td>
                     </tr>
                 </tbody>
