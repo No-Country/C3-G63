@@ -7,8 +7,7 @@ const Header = () => {
     <div className="header" id="header">
       <nav className="nav container">
         <a className="nav__logo">
-          <img src="Crypt-logo.png" alt="Logo Criptomoneda" />
-          LOGO
+          <img src="Crypt-logo.png" alt="Logo Criptomoneda" className="nav__crypt-logo" />
         </a>
 
         <div className="nav__menu" id="nav-menu">
