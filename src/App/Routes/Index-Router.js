@@ -6,7 +6,7 @@ import SignUp from '../components/SignUp/SignUp';
 import WalletPage from '../../Pages/Wallet/WalletPage';
 
 
-import Page from '../Page/page';
+import Home from '../Home/Home';
 import { AcreditarView } from '../components/Acreditar/acreditarView';
 
 export function App() {
@@ -15,7 +15,7 @@ export function App() {
 
 
       <Routes>
-        <Route path="/" element={<Page />} />
+        <Route path="/" element={<Home />} />
         <Route path="/acreditar" element={<AcreditarView />} />
         <Route path="/portfolio" element={<WalletPage />} />
         <Route path="/login" element={<Login />} />
