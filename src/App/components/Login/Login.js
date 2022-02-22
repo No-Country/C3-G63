@@ -1,12 +1,12 @@
 import React from "react";
 import logo from '../../../Assets/Vector.png';
-import '../../../index.css'
+import './Login.scss'
 
 
 
 const Login = () => {
   return (
-    <div className="container">
+    <div className="container logoBox">
         <div>
             <img src={logo} alt="logo"/>
         </div>
