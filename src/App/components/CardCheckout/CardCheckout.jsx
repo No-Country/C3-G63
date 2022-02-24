@@ -1,11 +1,20 @@
-import React from 'react'
+import {React, useState} from 'react';
 import './CardCheckout.scss';
 import CardCheckoutCode from './CardCheckoutCode';
 
 
 const CardCheckout = () => {
 
-    <CardCheckoutCode />
+    /* Giro boton Formulario */
+
+    const [botonGirado, setbotonGirado] = useState (true);
+
+    const giroBoton = () => {
+        setbotonGirado (!botonGirado);
+        console.log(botonGirado);
+    };
+
+    /*<CardCheckoutCode />*/
     return (
     <div className='contenedor__checkout'>
         <section className="tarjeta" id="tarjeta"> {/* EL .active se hace con JS */}
@@ -69,14 +78,14 @@ const CardCheckout = () => {
 
         {/* BOTON FORMULARIO */}
         <div className="contenedor-btn">
-        <button className="btn-abrir-formulario" id="btn-abrir-formulario">
+        <button className = { giroBoton ? 'btn-abrir-formulario active' : 'btn-abrir-formulario'} id="btn-abrir-formulario" onClick={giroBoton} >
             <i class="fas fa-plus"></i>
         </button>
         </div>
 
 
             {/* FORMULARIO */}
-            <form action="" id="formulario-tarjeta" className="formulario-tarjeta">
+            <form action="" id="formulario-tarjeta" className = { giroBoton ? 'formulario-tarjeta active' : 'formulario-tarjeta'}>
 
             <div className="grupo">
                 <label for="inputNumero">Número Tarjeta</label>
