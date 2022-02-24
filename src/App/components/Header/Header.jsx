@@ -5,7 +5,7 @@ import "./Header.scss";
 const Header = () => {
   return (
     <div className="header" id="header">
-      <nav className="nav container">
+      <nav className="nav container__header">
         <a className="nav__logo">
           <img src="Crypt-logo.png" alt="Logo Criptomoneda" className="nav__crypt-logo" />
         </a>
@@ -14,28 +14,28 @@ const Header = () => {
           <ul className="nav__list">
             <li className="nav__item">
               <a className="nav__link">
-                <i className="fas fa-coins"></i>
+                <i className="fas fa-coins fa-2x"></i>
                 <span className="nav__name">Coins</span>
               </a>
             </li>
 
             <li className="nav__item">
               <a className="nav__link">
-                <i className="fas fa-suitcase"></i>
+                <i className="fas fa-suitcase fa-2x"></i>
                 <span className="nav__name">Portfolio</span>
               </a>
             </li>
 
             <li className="nav__item">
               <a className="nav__link">
-                <i className="fas fa-search"></i>
+                <i className="fas fa-search fa-2x"></i>
                 <span className="nav__name">Search</span>
               </a>
             </li>
 
             <li className="nav__item">
               <a className="nav__link">
-                <i className="fas fa-sign-out-alt"></i>
+                <i className="fas fa-sign-out-alt fa-2x"></i>
                 <span className="nav__name">Exit </span>
               </a>
             </li>
@@ -44,7 +44,7 @@ const Header = () => {
 
         <div className="nav__item">
           <Link to="/login" href="#login" className="nav__link">
-            <i className="fas fa-user"></i>
+            <i className="fas fa-user fa-2x"></i>
             <span className="nav__name">Login </span>
           </Link>
         </div>

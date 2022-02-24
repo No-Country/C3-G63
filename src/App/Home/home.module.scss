@@ -1,0 +1,15 @@
+$text-color-dark: #1D1D1B;
+$normal-font-size: 14px;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 3rem 0 0 0;
+    font-size: $normal-font-size;
+    background: url('../../Assets/fondo.png');
+    background-size: contain;
+    color: $text-color-dark;
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -8,6 +8,7 @@ import WalletPage from '../../Pages/Wallet/WalletPage';
 
 import Home from '../Home/Home';
 import { AcreditarView } from '../components/Acreditar/acreditarView';
+import Checkout from '../components/Checkout/Checkout';
 
 export function App() {
   return (
@@ -21,6 +22,7 @@ export function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<SignUp />} />
         <Route path="/ingreso" element={<SignIn />} />
+        <Route path='/checkout' element={<Checkout />} />
       </Routes>
 
     </BrowserRouter>
