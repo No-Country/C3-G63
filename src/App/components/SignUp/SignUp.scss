@@ -1,0 +1,26 @@
+
+$main-color: #009640;
+$secondary-color: #1D1D1B;
+$light-color: #C4C4C4;
+$test-color: #FDF4DD;
+$text-color-dark: #000000;
+$text-color-light: #FFFFFF;
+
+
+$large-font-size: 1.5rem;
+$normal-font-size: 1rem;
+$tiny-font-size: 0.6rem;
+
+
+.formCtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
