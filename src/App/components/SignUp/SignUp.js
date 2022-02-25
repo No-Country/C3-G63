@@ -34,7 +34,7 @@ const SignUp = () => {
               <GoogleLogin 
               clientId="990173810108-o8a32tut813k0ulff95c1gldnk17occc.apps.googleusercontent.com"
               render={renderProps => (
-                <button onClick={renderProps.onClick} disabled={renderProps.disabled}>Login with Google</button>
+                <button onClick={renderProps.onClick} disabled={renderProps.disabled}>Signin with Google</button>
               )}
               onSuccess={responseGoogle}
               onFailure={responseGoogle}
@@ -52,6 +52,7 @@ const SignUp = () => {
               fields="name,email,picture"
               onClick={componentClicked}
               callback={responseFacebook}
+              textButton="Sign in with Facebook"
             
             />
               
