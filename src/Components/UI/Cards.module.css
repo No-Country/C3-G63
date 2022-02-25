@@ -23,7 +23,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
+}
+
+.cryptoCtn img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .cryptoCtn p {
