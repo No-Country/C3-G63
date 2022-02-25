@@ -8,6 +8,8 @@ import WalletPage from '../../Pages/Wallet/WalletPage';
 
 import Home from '../Home/Home';
 import { AcreditarView } from '../components/Acreditar/acreditarView';
+import FormEmail from '../components/SignUp/FormEmail';
+import LoginEmail from '../components/Login/LoginEmail';
 
 export function App() {
   return (
@@ -20,6 +22,8 @@ export function App() {
         <Route path="/portfolio" element={<WalletPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<SignUp />} />
+        <Route path='/registroEmail' element={<FormEmail />} />`
+        <Route path='/longinCorreo' element={<LoginEmail />} />
         <Route path="/ingreso" element={<SignIn />} />
       </Routes>
 
