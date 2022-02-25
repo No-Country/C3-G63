@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import logo from '../../../Assets/Vector.png';
 import '../../../index.css'
+import './SignIn.module.scss'
 
 const SignIn = () => {
 

@@ -1,16 +1,18 @@
 import React from 'react'
 
-const LoginEmail = () => {
+const LoginCorreo = () => {
   return (
-    <div>
-        <form>
-            <label for="">usuario</label><br/>
-            <input type="text" id='usuario'/>
-            <label for="">Contraseña</label>
-            <input type="password" id="contreña"/>
-        </form>
+    <div className='bordeado'>
+        <form className='formulario'>
+                <label  for="">
+                  <h1>Usuario</h1>
+                </label><br/>
+                <input type="text" placeholder="Usuario" id='usuario'/>
+                <input type="passoword" placeholder="Contraseña"/>
+                <button>Confirmar</button>
+            </form>
     </div>
   )
 }
 
-export default LoginEmail
+export default LoginCorreo

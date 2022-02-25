@@ -120,6 +120,15 @@ button{
     font-size: 15px;
     cursor: pointer;
 }
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
  /*   button{
     background-color: #F6AA47 ;
     display: inline-block;

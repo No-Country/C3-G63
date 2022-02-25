@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../../../Assets/Vector.png';
-import './Login.scss'
+import './Login.module.scss'
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from "react-google-login";
 
