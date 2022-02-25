@@ -23,7 +23,7 @@ export function App() {
         <Route path="/portfolio" element={<WalletPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<SignUp />} />
-        <Route path='/registroEmail' element={<FormEmail />} />`
+        <Route path='/registroemail' element={<FormEmail />} />`
         <Route path='/longinCorreo' element={<LoginEmail />} />
         <Route path="/ingreso" element={<SignIn />} />
         <Route path='/checkout' element={<Checkout />} />
