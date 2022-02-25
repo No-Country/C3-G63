@@ -9,6 +9,7 @@
 
 .cardCtn {
     border: 1px solid #C4C4C4;
+    background-color: #fff;
     display: flex;
     width: 320px;
     height: 121px;
@@ -16,6 +17,7 @@
     align-items: center;
     border-radius: 20px;
     margin-top: 10px;
+    box-shadow: 0 7px 6px #009640;
 }
 
 .cryptoCtn {
@@ -23,11 +25,23 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
+    font-weight: 800;
+    font-size: larger;
+}
+
+.cryptoCtn img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .cryptoCtn p {
     margin-top: 5px;
+}
+
+.price {
+    font-size: larger;
+    font-weight: 800;
 }
 
 .btnCtn {
@@ -42,5 +56,12 @@
     border: none;
     padding: 10px 40px;
     border-radius: 10px;
+}
+
+.btnPrimary {
     background-color: #F6AA47;
+}
+
+.btnSecondary {
+    background-color: #C4C4C4;
 }
