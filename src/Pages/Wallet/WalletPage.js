@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Header from '../../App/components/Header/Header';
 import axios from "../../Components/api/apicrypto"
 import Cards from '../../Components/UI/Cards';
 import styles from "./WalletPage.module.css"
@@ -9,7 +10,7 @@ const WalletPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             const fetchedData = await axios.get("https://crypto-app-b0955-default-rtdb.firebaseio.com/crypto.json");
-            console.log(fetchedData)
+            
             const loadedCrypto = [];
 
             for (const key in fetchedData.data) {
@@ -20,14 +21,13 @@ const WalletPage = () => {
                 })
             }
             setData(loadedCrypto);
-            console.log(loadedCrypto)
+            
         }
         fetchData()
     }, [])
 
     return (
         <>
-        <div className={styles.headerTest}>HEADER</div>
         <div className={styles.walletCtn}>
             <Cards data={data}/>
         </div>
