@@ -9,11 +9,11 @@ const SignIn = () => {
 
 
   return (
-    <div className='container'>
+    <div className='container logoBox'>
         <div>
             <img src={logo} alt="logo"/>
         </div>
-        <div>
+        <div className='logo_box_info'>
             <h1>Ingresa</h1>
             <NavLink to={`/login`}><button>Login</button></NavLink>
             <br/>
