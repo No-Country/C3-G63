@@ -44,7 +44,7 @@ const Header = () => {
         </div>
 
         <div className="nav__item">
-          <Link to="/login" href="#login" className="nav__link">
+          <Link to="/ingreso" href="#login" className="nav__link">
             <i className="fas fa-user"></i>
             <span className="nav__name">Login </span>
           </Link>
