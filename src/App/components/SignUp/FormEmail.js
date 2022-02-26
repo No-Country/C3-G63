@@ -9,7 +9,6 @@ import useInput from "../../../hooks/use-input";
 const FormEmail = () => {
   const isNotEmpty = value => value.trim() !== '' && value.length > 5;
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const {
