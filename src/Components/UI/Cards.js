@@ -8,10 +8,9 @@ const Cards = ({ data }) => {
     <div className={styles.container}>
       {data.map((el) => {
         return (
-          <>
-            <div className={styles.cardCtn__info}>
+            <div key={el.name} className={styles.cardCtn__info}>
               <div className={styles.cardCtn}>
-                <div key={el.name} className={styles.cryptoCtn}>
+                <div className={styles.cryptoCtn}>
                   <img src={el.logo} />
                   <p>{el.name}</p>
                 </div>
@@ -36,7 +35,6 @@ const Cards = ({ data }) => {
                 <button className={styles.btnSecondary}>Vender </button>
               </div>
             </div>
-          </>
         );
       })}
     </div>
