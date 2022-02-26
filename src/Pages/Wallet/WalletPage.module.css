@@ -5,7 +5,16 @@
     width: 100vw;
     justify-content: center;
     margin-top: 10px;
-    overflow-y: scroll;
     padding-bottom: 80px;
-
 }
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+    .walletCtn {
+        padding-bottom: 0px;
+    }
+}
+
+
+

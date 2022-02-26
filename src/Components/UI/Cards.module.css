@@ -1,67 +1,82 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 320px;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
 }
 
 .cardCtn {
-    border: 1px solid #C4C4C4;
-    background-color: #fff;
-    display: flex;
-    width: 320px;
-    height: 121px;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 20px;
-    margin-top: 10px;
-    box-shadow: 0 7px 6px #009640;
+  border: 1px solid #c4c4c4;
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  height: 121px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 10px;
+  box-shadow: 0 7px 6px #009640;
 }
 
 .cryptoCtn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 800;
-    font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  font-size: larger;
 }
 
 .cryptoCtn img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 .cryptoCtn p {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
+
+
 .price {
-    font-size: larger;
-    font-weight: 800;
+  font-size: larger;
+  font-weight: 800;
 }
 
 .btnCtn {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5px;
-    
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
 }
 
 .btnCtn button {
-    border: none;
-    padding: 10px 40px;
-    border-radius: 10px;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 10px;
 }
 
 .btnPrimary {
-    background-color: #F6AA47;
+  background-color: #f6aa47;
 }
 
 .btnSecondary {
-    background-color: #C4C4C4;
+  background-color: #c4c4c4;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+    .container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+    .cardCtn__info {
+        width: 320px;
+        justify-self: center;
+    }
 }
