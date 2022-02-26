@@ -24,3 +24,17 @@ $tiny-font-size: 0.6rem;
     flex-direction: column;
     justify-content: center;
 }
+
+.formulario button:disabled,
+.formulario button:disabled:hover,
+.formulario button:disabled:active {
+  background-color: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.error {
+    color: red;
+}
