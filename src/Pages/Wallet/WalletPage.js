@@ -15,6 +15,9 @@ const WalletPage = () => {
             for (const key in fetchedData.data) {
                 loadedCrypto.push({
                     name: fetchedData.data[key].name,
+                    low: fetchedData.data[key].low,
+                    mid: fetchedData.data[key].mid,
+                    high: fetchedData.data[key].high,
                     logo: fetchedData.data[key].logo,
                     price: fetchedData.data[key].price,
                 })
