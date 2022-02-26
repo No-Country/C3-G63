@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Header from '../../App/components/Header/Header';
+
 import axios from "../../Components/api/apicrypto"
 import Cards from '../../Components/UI/Cards';
 import styles from "./WalletPage.module.css"
