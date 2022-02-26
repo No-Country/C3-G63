@@ -69,5 +69,14 @@
 /* MEDIA QUERIES */
 
 @media (min-width: 1024px) {
-
+    .container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+    .cardCtn__info {
+        width: 320px;
+        justify-self: center;
+    }
 }
