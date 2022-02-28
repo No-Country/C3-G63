@@ -11,92 +11,18 @@ $large-font-size: 1.5rem;
 $normal-font-size: 1rem;
 $tiny-font-size: 0.6rem;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.formCtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 3rem 0 0 0;
-    font-size: $normal-font-size;
-    background-color: $light-color;
-    color: $text-color-dark;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-/* LAYOUT */
-.container {
+.formulario {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    border: 1px solid red;
-}
-.logoIcon{
-    padding-bottom: 30px;
-    img{
-        padding: 1rem;
-    }
 }
 
-.logo_box_info{
-    width: 80%;
-    padding: 60px;
-    background-color: #FFFFFF;
-    border: none;
-    border-radius: 1.25rem;
-    text-align: center;
-    
-}
-.logoBox{
-    background-image: url('../../../Assets/fondo.png');
-    padding: 0.5rem 0 2rem;
-    width: 100%;
-    height: 100vh;
-    
-}
-
-.logo_name{
-    text-align: center;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-form input{
-    background-color: rgb(224, 224, 224);
-    display: block;
-    border: none;
-    padding: 10px;
-    margin: 10px auto;
-    border-radius: 15px;
-}
-
-button{
-    background-color: #F6AA47 ;
-    display: inline-block;
-    border: none;
-    padding: 10px;
-    margin: 12px;
-    width: 170px;
-    border-radius: 10px;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 700;
-    font-size: 15px;
-}
+  

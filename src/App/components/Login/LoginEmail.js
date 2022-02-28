@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LoginEmail = () => {
+const LoginEorreo = () => {
   return (
     <div>
         <form>
@@ -13,4 +13,4 @@ const LoginEmail = () => {
   )
 }
 
-export default LoginEmail
+export default LoginEorreo
