@@ -1,11 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import IndexRouter from './App/Routes/Index-Router';
-import "./index.css"
+import React from "react";
+import ReactDOM from "react-dom";
+import IndexRouter from "./App/Routes/Index-Router";
+import { AuthProvider } from "./store/auth-context";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <IndexRouter />
+    <AuthProvider>
+      <IndexRouter />
+    </AuthProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

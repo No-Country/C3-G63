@@ -59,7 +59,7 @@ const Login = () => {
             />
               
             <br/>
-            <Link to={`/loginCorreo`}><button>Login with Email</button></Link>
+            <Link to={`/logincorreo`}><button>Login with Email</button></Link>
           </div>
       </div>
       
