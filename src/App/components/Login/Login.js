@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../../../Assets/Vector.png';
-import './Login.scss'
+import './Login.module.scss'
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from "react-google-login";
 
@@ -59,7 +59,7 @@ const Login = () => {
             />
               
             <br/>
-            <Link to={`/loginCorreo`}><button>Login with Email</button></Link>
+            <Link to={`/logincorreo`}><button>Login with Email</button></Link>
           </div>
       </div>
       

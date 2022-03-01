@@ -57,7 +57,7 @@ const SignUp = () => {
             />
               
             <br/>
-            <Link to={`/registroEmail`}> <button>Sign In with Email</button></Link> 
+            <Link to={`/registroemail`}> <button>Sign In with Email</button></Link> 
         </div>
 
     </div>

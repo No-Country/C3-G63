@@ -1,39 +1,42 @@
 import React from "react";
 import styles from "./Cards.module.css";
+import { optionsCard } from "../../helper/chart";
+import Chart from "react-apexcharts";
 
 const Cards = ({ data }) => {
-  console.log(data);
-
   return (
     <div className={styles.container}>
-      <div className={styles.cardCtn}>
-        <div className={styles.cryptoCtn}>
-          <i className="fab fa-bitcoin fa-2x"></i>
-          <p>Bitcoin</p>
-        </div>
-          <p>$41.000</p>
-        <div>
-          <p>grafico critpo</p>
-        </div>
-      </div>
-      <div className={styles.btnCtn}>
-        <button>Comprar</button>
-        <button>Vender </button>
-      </div>
-      <div className={styles.cardCtn}>
-        <div className={styles.cryptoCtn}>
-          <i className="fab fa-ethereum fa-2x"></i>
-          <p>Ethereum</p>
-        </div>
-          <p>$2.950</p>
-        <div>
-          <p>grafico critpo</p>
-        </div>
-      </div>
-      <div className={styles.btnCtn}>
-        <button>Comprar</button>
-        <button>Vender </button>
-      </div>
+      {data.map((el) => {
+        return (
+            <div key={el.name} className={styles.cardCtn__info}>
+              <div className={styles.cardCtn}>
+                <div className={styles.cryptoCtn}>
+                  <img src={el.logo} />
+                  <p>{el.name}</p>
+                </div>
+                <p className={styles.price}>${el.price}</p>
+                <div className={styles.graph}>
+                  <Chart
+                    options={optionsCard}
+                    series={[
+                      {
+                        name: "Price",
+                        data: [el.high, el.low, el.mid],
+                      },
+                    ]}
+                    type="line"
+                    width="140"
+                    height="150"
+                  />
+                </div>
+              </div>
+              <div className={styles.btnCtn}>
+                <button className={styles.btnPrimary}>Comprar</button>
+                <button className={styles.btnSecondary}>Vender </button>
+              </div>
+            </div>
+        );
+      })}
     </div>
   );
 };

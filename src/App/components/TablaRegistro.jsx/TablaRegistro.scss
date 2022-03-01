@@ -1,83 +1,106 @@
 $main-color: #009640;
 $secondary-color: #1D1D1B;
 $light-color: #C4C4C4;
+$gold-color: #F6AA47;
+$red-color: #af0000;
 $test-color: #FDF4DD;
 $text-color-dark: #000000;
 $text-color-light: #FFFFFF;
 
 
 $large-font-size: 1.5rem;
-$normal-font-size: 1rem;
+$normal-font-size: 14px;
 $tiny-font-size: 0.6rem;
+
+
+
 
 /* MAIN (RANKING CRYPTO) */
 
 .section {
     padding: 2rem 0 2rem;
+    font-family: 'Titillium Web';
 }
 
 .section__title {
     width: 100%;
-    font-size: $large-font-size;
-    text-transform: uppercase;
+    font-size: 1.75rem;
     color: $main-color;
     text-align: center;
-    padding: 30px;
-    border: none;
-    background-color: #FDF4DD;
-    border-radius: 1.25rem 1.25rem 0 0;
+    padding: 5px;
+    font-weight: bolder;
+    padding-bottom: 20px;
 }
 
 .section__height {
     height: 100vh;
 }
 
+
 /* TABLE */
 
-main {
-    padding: 1em;
-}
-
 .table {
-    border-collapse: collapse;
+    background: #fff;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    table-layout: fixed;
+    height: auto;
+    max-width: 700px;
+    min-width: 290px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 1px 8px 10px #888888;
+    border: 1px solid rgba($color: #000000, $alpha: 0.3);
+    margin: 0 auto;
 }
 
-th {
-    background-color: $main-color;
-    color: $light-color;
-    font-weight: bold;
-}
-
-td, th {
-    padding: 16px;
-    border: 1px solid $main-color;
+.table__container {
+    display: grid;
+    height: 500px;
+    width: 100%;
+    max-width: 700px;
+    grid-template-columns: 5% 10% 20% 10% 10% 25% 10% 10%;
+    font-weight: 800;
+    align-items: center;
     text-align: center;
-    content: 10px;
 }
 
-.second-column {
-    img {
-        cursor: pointer;
+
+.down {
+    i {
+        color: $red-color;
     }
 }
+
+.up {
+    i {
+        color: $main-color;
+    }
+}
+
+.c2 {
+    i {
+        color: $gold-color;
+    }
+}
+
+.c4 {
+    i {
+        color: $main-color;
+    }
+}
+
 
 
 /* MEDIA QUERIES */
 
 /* SMALL DEVICES */
 @media screen and (max-width: 767px) {
-    .nav__name{
-        display: none;
+
+    .table__container {
+        grid-template-columns: 20% 30% 10% 40%;
     }
 
-    .first-column,
-    .six-column,
-    .seven-column,
-    .eight-column{
+    .magic{
         display: none;
     }
 }
