@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {Context} from "../../../store/auth-context"
 import LoadingSpinner from "../../../Components/UI/LoadingSpinner";
-import { auth } from "../../../firebase";
 import "./SignUp.scss";
 import useInput from "../../../hooks/use-input";
 
 const FormEmail = () => {
+  const authCtx = useContext(Context)
   const isNotEmpty = value => value.trim() !== '' && value.length > 5;
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -39,14 +39,11 @@ const FormEmail = () => {
     setIsLoading(true)
     event.preventDefault();
     try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        enteredEmail,
-        enteredPassword
-      );
+      await authCtx.signup(enteredEmail, enteredPassword)
       setIsLoading(false)
       navigate("/");
-      console.log(user);
+      console.log(authCtx.enteredEmail);
+
     } catch (error) {
       setIsLoading(false)
  
@@ -60,7 +57,7 @@ const FormEmail = () => {
         <label htmlFor="user">Email</label>
         <input
           id="user"
-          type="text"
+          type="email"
           placeholder="Email"
           onBlur={emailBlurHandler}
           onChange={emailChangedHandler}
