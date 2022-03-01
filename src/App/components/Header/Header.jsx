@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../../store/auth-context";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
+  const { user, logout } = useContext(Context);
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
   return (
     <div className="header" id="header">
       <nav className="nav container__header">
         <a className="nav__logo">
-          <img src="Crypt-logo.png" alt="Logo Criptomoneda" className="nav__crypt-logo" />
+          <img
+            src="Crypt-logo.png"
+            alt="Logo Criptomoneda"
+            className="nav__crypt-logo"
+          />
         </a>
 
         <div className="nav__menu" id="nav-menu">
@@ -32,20 +47,19 @@ const Header = () => {
                 <span className="nav__name">Search</span>
               </a>
             </li>
-
-            <li className="nav__item">
-              <a className="nav__link">
+            {user && (
+              <button onClick={handleLogout}>
                 <i className="fas fa-sign-out-alt fa-2x"></i>
                 <span className="nav__name">Exit </span>
-              </a>
-            </li>
+              </button>
+            )}
           </ul>
         </div>
 
         <div className="nav__item">
           <Link to="/ingreso" href="#login" className="nav__link">
             <i className="fas fa-user  fa-2x"></i>
-            <span className="nav__name">Login </span>
+            <span className="nav__name">{user ? user?.email : "Login"}</span>
           </Link>
         </div>
       </nav>
