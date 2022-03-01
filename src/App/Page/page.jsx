@@ -6,13 +6,9 @@ import './page.scss';
 
 const Page = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      
-=======
     <div className='body'>
       <AcreditarView />
->>>>>>> master
+
     </div>
   );
 };
