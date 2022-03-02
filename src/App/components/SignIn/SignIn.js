@@ -5,20 +5,17 @@ import '../../../index.css'
 
 const SignIn = () => {
 
-
-
-
   return (
     <div className='container'>
-        <div>
-            <img src={logo} alt="logo"/>
-        </div>
-        <div>
-            <h1>Ingresa</h1>
-            <NavLink to={`/login`}><button>Login</button></NavLink>
-            <br/>
-            <NavLink to={`/registro`}><button>Sign In</button></NavLink>
-        </div>
+      <div>
+        <img src={logo} alt="logo" />
+      </div>
+      <div>
+        <h1>Ingresa</h1>
+        <NavLink to={`/login`}><button>Login</button></NavLink>
+        <br />
+        <NavLink to={`/registro`}><button>Sign In</button></NavLink>
+      </div>
     </div>
   )
 }

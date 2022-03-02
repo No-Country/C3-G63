@@ -28,7 +28,7 @@ export const AcreditarView = props => {
           </div>
         </div>
         <div className='Container-info'>
-          <h1> {city} Acredita a tu Cuenta</h1>
+          <h1>  Acredita a tu Cuenta</h1>
         </div>
         <div className='Container-buttons'>
           <div className='btn-1'>
