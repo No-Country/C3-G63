@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { MonedaView } from "./MonedaView";
 
-export const Moneda = () => {
-  const holis = 'holis';
-  const [Estadistica, setEstadistica] = useState([]);
+const Moneda = () => {
   const array = [
     {
       id: 1,
@@ -31,12 +29,8 @@ export const Moneda = () => {
       number: 10,
     },
   ];
-
-  return (
-    <MonedaView
-      holis={holis}
-      Estadistica={Estadistica}
-      array={array}
-    />
-  );
+  console.log("🚀 ~ file: Moneda.js ~ line 32 ~ Moneda ~ array", array)
+  return (<MonedaView array={array} />);
 }
+
+export default Moneda;

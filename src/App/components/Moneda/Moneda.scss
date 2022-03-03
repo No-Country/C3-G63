@@ -1,0 +1,144 @@
+.fondo {
+}
+
+.vent-compra {
+  border-radius: 12px;
+  box-shadow: 0px 4px 2px 2px #009640;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-vent {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 12px;
+}
+
+.btn-venta {
+  background: #f6aa47;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.btn-compra {
+  background: #c4c4c4;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 35px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.vent-compra img {
+  width: 10%;
+  display: flex;
+  object-fit: contain;
+  margin: auto;
+}
+
+.container {
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.h1E {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  color: #009640;
+}
+
+.Container-Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  height: 80px;
+  margin: auto;
+}
+
+.Moneda__item__name {
+  font-size: 1rem;
+  font-weight: bold;
+  justify-self: flex-start;
+}
+
+.Moneda__item__number {
+  justify-items: flex-end;
+  display: flex;
+  border: 1px solid #f6aa47;
+  width: 45px;
+  height: 38px;
+  justify-self: end;
+  border-radius: 12px;
+}
+
+h2 {
+  margin: auto;
+  display: flex;
+}
+
+.noticias {
+  box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.noticias-container {
+  display: flex;
+  width: 95%;
+  align-items: baseline;
+  margin: auto;
+  margin-top: -40px;
+}
+
+.noticias-images {
+  background: #f6aa47;
+  border-radius: 12px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  margin-left: auto;
+}
+
+.noticias-images img {
+  width: 50%;
+  display: flex;
+  object-fit: contain;
+  margin: auto;
+}
+
+.h1N {
+  display: flex;
+  justify-content: end;
+  width: 40%;
+  color: #009640;
+}
+
+.container-info {
+  display: flex;
+  background: #009640;
+  border-radius: 12px;
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.h4 {
+  color: white;
+  font-weight: bold;
+  border: 1.5px solid #fdfdfd;
+  border-radius: 12px;
+  width: 80%;
+  height: 50px;
+  margin: auto;
+  align-items: center;
+}
