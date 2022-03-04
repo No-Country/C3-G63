@@ -1,10 +1,45 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
+import axios from "axios" 
 import { Context } from "../../../store/auth-context";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
   const { user, logout } = useContext(Context);
+
+  const [coin, setCoin] = useState([])
+  const [search, setSearch] = useState("");
+  const [highNav, setHighNav] = useState(true)
+
+  
+
+  const busqueda = async () => {
+    await axios.get("https://crypto-app-b0955-default-rtdb.firebaseio.com/crypto.json")
+    .then(response=>{
+      setSearch(response.data)
+    }).catch(error=>{
+      console.log(error)
+    })
+  }
+  
+  const handleChange=e=>{
+    setSearch(e.target.value)
+    filtrar(e.target.value)
+  }
+
+  useEffect(() => {
+    busqueda();
+  }, [])
+  
+  const filtrar = (monedaBusqueda) => {
+
+    var resultadoBusqueda = coin.height.filter((element) =>{
+      if(element.height.toString().toLowerCase().includes(monedaBusqueda.toLowerCase())){
+        return element;
+      }
+    })
+    setCoin(resultadoBusqueda);
+  }
 
   const handleLogout = async () => {
     try {
@@ -13,6 +48,7 @@ const Header = () => {
       console.error(error.message);
     }
   };
+
 
   return (
     <div className="header" id="header">
@@ -43,8 +79,13 @@ const Header = () => {
 
             <li className="nav__item">
               <a className="nav__link">
-                <i className="fas fa-search fa-2x"></i>
-                <span className="nav__name">Search</span>
+                <i onClick={""} className="fas fa-search fa-2x"></i>
+                <span className="nav__name"
+                  onChange={handleChange}
+                  value={search}
+                  
+                
+                > Search </span>
               </a>
             </li>
             {user && (
@@ -64,6 +105,8 @@ const Header = () => {
         </div>
       </nav>
     </div>
+
+    
   );
 };
 

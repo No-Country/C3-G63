@@ -1,8 +1,9 @@
 
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth"
+import {firebase} from "firebase/app";
 
-const firebaseConfig = {
+
+
+const app = firebase.initializeApp({
   apiKey: "AIzaSyCyWdJiGZA1KS92n47i-x81zeThTQ8_tx8",
   authDomain: "nc-g63.firebaseapp.com",
   projectId: "nc-g63",
@@ -10,9 +11,11 @@ const firebaseConfig = {
   messagingSenderId: "585781689893",
   appId: "1:585781689893:web:4fdc97560d7b5fc2d509cc",
   measurementId: "G-WJSVK4T8DG"
-};
+});
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const getFirebase = () => {
+    return app
+}
 
-export const auth = getAuth(app)
+
+

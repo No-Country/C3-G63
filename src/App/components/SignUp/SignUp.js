@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 import logo from '../../../Assets/Vector.png'
 import './SignUp.scss'
 import FacebookLogin from 'react-facebook-login';
@@ -7,7 +7,8 @@ import GoogleLogin from "react-google-login";
 
 const SignUp = () => {
 
-
+  
+  const navigate = useNavigate();
 
   const responseGoogle = (response) => {
     console.log(response);
@@ -36,9 +37,12 @@ const SignUp = () => {
               render={renderProps => (
                 <button onClick={renderProps.onClick} disabled={renderProps.disabled}>Signin with Google</button>
               )}
+              
               onSuccess={responseGoogle}
               onFailure={responseGoogle}
               cookiePolicy={'single_host_origin'}
+              navigate={'/'}
+              
               
               
               
@@ -57,7 +61,7 @@ const SignUp = () => {
             />
               
             <br/>
-            <Link to={`/registroemail`}> <button>Sign In with Email</button></Link> 
+            <Link to={`/registroemail`}><button>Sign In with Email</button></Link> 
         </div>
 
     </div>
