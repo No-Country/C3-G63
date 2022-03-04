@@ -13,6 +13,7 @@ import FormEmail from "../components/SignUp/FormEmail";
 import LoginEmail from "../components/Login/LoginEmail";
 
 export function App() {
+
   return (
     <BrowserRouter>
       <Layout>
