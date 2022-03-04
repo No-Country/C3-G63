@@ -15,6 +15,7 @@ const Page = lazy(() => import('../Page/page'));
 const AcreditarView = lazy(() => import('../components/Acreditar/acreditarView'));
 
 export function App() {
+
   return (
     <BrowserRouter>
       <Layout>
