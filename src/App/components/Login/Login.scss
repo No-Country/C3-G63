@@ -11,32 +11,6 @@ $large-font-size: 1.5rem;
 $normal-font-size: 1rem;
 $tiny-font-size: 0.6rem;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 3rem 0 0 0;
-    font-size: $normal-font-size;
-    background-color: $light-color;
-    color: $text-color-dark;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
 
 /* LAYOUT */
 .container {
@@ -129,45 +103,3 @@ button{
     width: 100%;
     
 }
- /*   button{
-    background-color: #F6AA47 ;
-    display: inline-block;
-    border: none;
-    padding: 10px;
-    margin: 12px;
-    width: 170px;
-    border-radius: 10px;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 700;
-  }
-  
-  img{
-    width: 75px;
-  }
-  
-  .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    width: 100%;
-    border: 1px solid red;
-    
-  }
-  
-  form input{
-    background-color: rgb(224, 224, 224);
-      display: block;
-      border: none;
-      padding: 10px;
-      margin: 10px auto;
-      border-radius: 15px;
-  }
-  
-  .fondo{
-    width: 100vh;
-    height: 100vh;
-    background-image: url("../../../Assets/fondo.png");
-    align-items: center;
-  }*/

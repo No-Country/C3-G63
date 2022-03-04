@@ -14,3 +14,22 @@ a {
   color: unset;
   text-decoration: none;
 }
+
+
+ul {
+  list-style: none;
+}
+
+
+button{
+  background-color: #F6AA47 ;
+  display: inline-block;
+  border: none;
+  padding: 10px;
+  margin: 12px;
+  width: 170px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  font-size: 15px;
+}
