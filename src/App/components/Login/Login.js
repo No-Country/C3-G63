@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../../../store/auth-context";
 import logo from "../../../Assets/Vector.png";
-import "./Login.module.scss";
+import "./Login.scss";
 
 const Login = () => {
   const authCtx = useContext(Context);
