@@ -8,7 +8,7 @@ const WalletPage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const fetchedData = await axios.get("https://crypto-app-b0955-default-rtdb.firebaseio.com/crypto.json");
+            const fetchedData = await axios.get("https://nc-g63-default-rtdb.firebaseio.com/crypto.json");
             
             const loadedCrypto = [];
 
