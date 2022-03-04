@@ -1,19 +1,19 @@
 import React from 'react';
 import flecha from '../../../Images/flecha.png';
-import Frame from '../../../Images/Frame.png';
 import usuario from '../../../Images/usuario.png';
 import './acreditar.scss';
+import swal from 'sweetalert';
 
 export const AcreditarView = props => {
-  const {
-    acreditar,
-    configuracion,
-    name,
-    setAcreditar,
-    setConfiguracion,
-    setLogo,
-    setName,
-  } = props;
+  const alertClick = () => {
+    swal({
+      title: "¿Estas seguro?",
+      text: "Una vez acreditado no podras revertir el cambio",
+      icon: "warning",
+      buttons: ["NO", "Aceptar"],
+      dangerMode: true,
+    })
+  }
 
   return (
     <>
@@ -28,13 +28,13 @@ export const AcreditarView = props => {
           </div>
         </div>
         <div className='Container-info'>
-          <h1>Acredita a tu Cuenta</h1>
+          <h1>  Acredita a tu Cuenta</h1>
         </div>
         <div className='Container-buttons'>
           <div className='btn-1'>
             <button> Tarjeta de Crédito/Débito</button>
           </div>
-          <div className='btn-2'>
+          <div className='btn-2' onClick={alertClick}>
             <button> Crypto Wallet</button>
           </div>
         </div>
