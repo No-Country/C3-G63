@@ -16,13 +16,13 @@ const TablaRegistro = () => {
                         1
                     </div>
                     <div className='r1 c2'>
-                        <i class="fab fa-bitcoin fa-3x"></i>
+                        <i className="fab fa-bitcoin fa-3x"></i>
                     </div>
                     <div className='r1 c3'>
                         Bitcoin
                     </div>
                     <div className='r1 c4 magic'>
-                        <i class="fas fa-chart-line fa-2x"></i>
+                        <i className="fas fa-chart-line fa-2x"></i>
                     </div>
                     <div className='r1 c5 down'>
                         <i class="fas fa-angle-double-down fa-2x"></i>
