@@ -2,8 +2,12 @@ import React from "react";
 import styles from "./Cards.module.css";
 import { optionsCard } from "../../helper/chart";
 import Chart from "react-apexcharts";
+import { useNavigate } from "react-router-dom";
 
 const Cards = ({ data }) => {
+  const navigate = useNavigate(
+
+  )
   return (
     <div className={styles.container}>
       {data.map((el) => {
@@ -31,7 +35,7 @@ const Cards = ({ data }) => {
                 </div>
               </div>
               <div className={styles.btnCtn}>
-                <button className={styles.btnPrimary}>Comprar</button>
+                <button onClick={() => navigate("/moneda")} className={styles.btnPrimary}>Comprar</button>
                 <button className={styles.btnSecondary}>Vender </button>
               </div>
             </div>

@@ -97,3 +97,13 @@ $tiny-font-size: 0.6rem;
     }
   }
 }
+
+
+.nav__link img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+.nav__link span {
+  margin-top: -10px;
+}
