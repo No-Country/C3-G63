@@ -6,11 +6,9 @@ import './SignIn.module.scss'
 
 const SignIn = () => {
 
-
-
-
   return (
     <div className='container logoBox'>
+
         <div>
             <img src={logo} alt="logo"/>
         </div>
