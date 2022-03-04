@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { MonedaView } from "./MonedaView";
 
 const Moneda = () => {
