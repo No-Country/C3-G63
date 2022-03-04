@@ -11,6 +11,22 @@ $large-font-size: 1.5rem;
 $normal-font-size: 1rem;
 $tiny-font-size: 0.6rem;
 
+.signupCtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    justify-content: center;
+}
+
+.logoIcon {
+    display: flex;
+    justify-content: center;
+}
+
+.logoIcon img {
+    width: 60%;
+}
 
 .formCtn {
     display: flex;

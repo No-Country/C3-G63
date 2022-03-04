@@ -17,13 +17,13 @@ const Header = () => {
   return (
     <div className="header" id="header">
       <nav className="nav container__header">
-        <a className="nav__logo">
+        <Link to="/" className="nav__logo">
           <img
             src="Crypt-logo.png"
             alt="Logo Criptomoneda"
             className="nav__crypt-logo"
           />
-        </a>
+        </Link>
 
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">

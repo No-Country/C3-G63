@@ -5,7 +5,7 @@ import "./SignUp.scss";
 
 const SignUp = () => {
   return (
-    <div className="container logoBox">
+    <div className="signupCtn">
       <div className="logoIcon">
         <img src={logo} alt="logo" />
       </div>
