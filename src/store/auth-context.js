@@ -44,5 +44,4 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return <Context.Provider value={{ signup, login, loginWithGoogle, loginWithFacebook, logout, user }}>{children}</Context.Provider>;
-
 };
