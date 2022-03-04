@@ -5,12 +5,12 @@ import SignIn from "../components/SignIn/SignIn";
 import SignUp from "../components/SignUp/SignUp";
 import WalletPage from "../../Pages/Wallet/WalletPage";
 import Layout from "../components/Layout/Layout";
-
 import Home from "../Home/Home";
 import { AcreditarView } from "../components/Acreditar/acreditarView";
 import Checkout from "../components/Checkout/Checkout";
 import FormEmail from "../components/SignUp/FormEmail";
 import LoginEmail from "../components/Login/LoginEmail";
+
 
 export function App() {
   return (
