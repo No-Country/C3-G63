@@ -17,7 +17,7 @@ const SignIn = () => {
             <h1>Ingresa</h1>
             <NavLink to={`/login`}><button>Login</button></NavLink>
             <br/>
-            <NavLink to={`/registro`}><button>Sign In</button></NavLink>
+            <NavLink to={`/registro`}><button>Sign Up</button></NavLink>
         </div>
     </div>
   )
