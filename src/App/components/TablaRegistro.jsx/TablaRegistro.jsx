@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './TablaRegistro.scss';
 
 const TablaRegistro = () => {
@@ -16,13 +17,13 @@ const TablaRegistro = () => {
                         1
                     </div>
                     <div className='r1 c2'>
-                        <i class="fab fa-bitcoin fa-3x"></i>
+                        <i className="fab fa-bitcoin fa-3x"></i>
                     </div>
                     <div className='r1 c3'>
                         Bitcoin
                     </div>
                     <div className='r1 c4 magic'>
-                        <i class="fas fa-chart-line fa-2x"></i>
+                        <i className="fas fa-chart-line fa-2x"></i>
                     </div>
                     <div className='r1 c5 down'>
                         <i class="fas fa-angle-double-down fa-2x"></i>
@@ -34,7 +35,7 @@ const TablaRegistro = () => {
                         +4,58 %
                     </div>
                     <div className='r1 c8 magic'>
-                        BUY
+                        <Link to={`/ingreso`}>Buy</Link>
                     </div>
 
                     {/* Fila 2 */}
@@ -60,7 +61,7 @@ const TablaRegistro = () => {
                         +7,41 %
                     </div>
                     <div className='r2 c8 magic'>
-                        BUY
+                        <Link to={`/ingreso`}>Buy</Link>
                     </div>
 
                     {/* Fila 3 */}
@@ -86,7 +87,7 @@ const TablaRegistro = () => {
                         +5,20 %
                     </div>
                     <div className='r3 c8 magic'>
-                        BUY
+                        <Link to={`/ingreso`}>Buy</Link>
                     </div>
 
                     {/* Fila 4 */}
@@ -112,7 +113,7 @@ const TablaRegistro = () => {
                         +7.51 %
                     </div>
                     <div className='r4 c8 magic'>
-                        BUY
+                        <Link to={`/ingreso`}>Buy</Link>
                     </div>
                 </div>
             </div>
