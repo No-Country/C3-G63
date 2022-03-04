@@ -59,7 +59,7 @@ const Header = () => {
         <div className="nav__item">
           <Link to="/ingreso" href="#login" className="nav__link">
             <i className="fas fa-user  fa-2x"></i>
-            <span className="nav__name">{user ? user?.email : "Login"}</span>
+            <span className="nav__name">{user ? ( user?.displayName|| user?.email) : "Login"}</span>
           </Link>
         </div>
       </nav>
