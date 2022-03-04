@@ -61,7 +61,7 @@ const TablaRegistro = () => {
                         +7,41 %
                     </div>
                     <div className='r2 c8 magic'>
-                        <Link to={`/ingreso`}>Buy</Link>
+                        <Link to={`/checkout`}>Buy</Link>
                     </div>
 
                     {/* Fila 3 */}
@@ -87,7 +87,7 @@ const TablaRegistro = () => {
                         +5,20 %
                     </div>
                     <div className='r3 c8 magic'>
-                        <Link to={`/ingreso`}>Buy</Link>
+                        <Link to={`/checkout`}>Buy</Link>
                     </div>
 
                     {/* Fila 4 */}
@@ -113,7 +113,7 @@ const TablaRegistro = () => {
                         +7.51 %
                     </div>
                     <div className='r4 c8 magic'>
-                        <Link to={`/ingreso`}>Buy</Link>
+                        <Link to={`/checkout`}>Buy</Link>
                     </div>
                 </div>
             </div>
