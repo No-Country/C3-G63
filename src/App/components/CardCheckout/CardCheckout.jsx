@@ -1,11 +1,17 @@
 import {React, useState} from 'react';
+import TablaRegistro from '../TablaRegistro.jsx/TablaRegistro';
 import './CardCheckout.scss';
 
 
 const CardCheckout = () => {
 
+    const [number, setNumber] = useState("");
     const [buttonTurned, setButtonTurned] = useState(true);
     const [turnCard, setTurnCard] = useState(true);
+
+    const numberHandler = (event) => {
+        setNumber(event.target.value)
+    }
 
     /* Turn Button / Form */
     const myButton = () => {
@@ -38,7 +44,7 @@ const CardCheckout = () => {
             <div className="datos">
                 <div className="grupo" id="numero">
                     <p className="label">Número tarjeta</p>
-                    <p className="numero">#### #### #### ####</p>
+                    <p className="numero">{number}</p>
                 </div>
 
                 <div className="flexbox">
@@ -98,7 +104,7 @@ const CardCheckout = () => {
 
             <div className="grupo">
                 <label for="inputNumero">Número Tarjeta</label>
-                <input type="text" id="inputNumero" maxlength="19" autocomplete="off" />
+                <input value={number} onChange={numberHandler} type="text" id="inputNumero" maxlength="19" autocomplete="off" />
             </div>
 
             <div className="grupo">
