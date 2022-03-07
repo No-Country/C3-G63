@@ -74,7 +74,7 @@ const FormEmail = () => {
           value={enteredPassword}
         />
         {passwordInputHasError && <p className="error">La contraseña debe ser de 6 caracteres</p>}
-        <button disabled={!formIsValid}>Confirmar</button>
+        <button className="login-button" disabled={!formIsValid}>Confirmar</button>
       </form>
       {isLoading && <LoadingSpinner />}
     </div>

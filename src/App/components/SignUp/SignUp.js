@@ -11,7 +11,7 @@ const SignUp = () => {
       </div>
       <div className="logo_box_info">
         <Link to={`/registroemail`}>
-          <button>Sign Up with Email</button>
+          <button className="login-button">Sign Up with Email</button>
         </Link>
       </div>
     </div>

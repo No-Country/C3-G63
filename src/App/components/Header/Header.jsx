@@ -48,7 +48,7 @@ const Header = () => {
               </a>
             </li>
             {user && (
-              <button onClick={handleLogout}>
+              <button className="nav__link exit__button" onClick={handleLogout}>
                 <i className="fas fa-sign-out-alt fa-2x"></i>
                 <span className="nav__name">Exit </span>
               </button>
@@ -56,7 +56,7 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className="nav__item">
+        <div className="nav__item nav__login">
           <Link to="/ingreso" href="#login" className="nav__link">
             {user ? <img src={user?.photoURL}/> :  <i className="fas fa-user  fa-2x"></i>}
             <span className="nav__name">{user ? ( user?.displayName|| user?.email) : "Login"}</span>

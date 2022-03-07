@@ -12,10 +12,10 @@ const SignIn = () => {
       </div>
       <div className="btnCtn">
         <NavLink to={`/login`}>
-          <button>Login</button>
+          <button className="login-button">Login</button>
         </NavLink>
         <NavLink to={`/registro`}>
-          <button>Sign Up</button>
+          <button className="login-button">Sign Up</button>
         </NavLink>
       </div>
     </div>
