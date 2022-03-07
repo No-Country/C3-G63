@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+# E-Crypt: Mercado de Criptomonedas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto creado utilizando React (Javascript) como front-end y Firebase como back-end. El objetivo de la aplicación consiste en brindar a los usuarios la capacidad de poder observar, comprar y vender todo tipo de criptomonedas, incluyendo la capacidad de realizar transacciones utilizando métodos modernos de pago como lo es una "crypto-wallet".
+
+El proyecto puede ser accesado a través del siguiente [link](https://ecrypt-nc-g63.herokuapp.com/)
+
+## Pasos para Deployment (Heroku)
+
+1. Moverse a la carpeta del proyecto `cd "CARPETA-PROYECTO"`
+2. Crear una cuenta de [Heroku](https://id.heroku.com/login) e instalar el Heroku CLI (Command Line Interface).
+3. Ingresar a Heroku desde la consola: `heroku login`
+4. Asegurarse de que exista un repo adentro de la carpeta de proyecto. En caso que no exista, inicializar el repo dentro de la misma carpeta en la que está el archivo `package.json`: `git init`
+5. Crear un proyecto dentro de Heroku (El nombre no es único para el usuario, sino para todos los usuarios de Heroku, por lo que puede que ya esté tomado): `heroku create APPNAME`
+6. Para corroborar que funciona se puede abrir la nueva app: `heroku open -a APPNAME`
+7. Se agrega el nuevo remoto de Heroku al repositorio local: `heroku git:remote -a APPNAME`
+8. Instalar express: `npm install express --save`.
+9. Crear un archivo para el servidor dentro de la carpeta `server`. [Utilizar express para crear un servidor estático](https://betterprogramming.pub/how-to-deploy-your-react-app-to-heroku-aedc28b218ae).
+10. Crear un "production build" de la aplicación: `npm run build`.
+11. Crear un Procfile, para indicarle a Heroku el comando a correr para hacer correr nuestro servidor estático.
+12. Configurar las variables de entorno adentro del archivo `.env` dentro de Heroku: `heroku config:set VARIABLE_NAME=value`
+13. "Pushear" los cambios de rama actual a Heroku: `git push heroku master:main`
+14. Abrir la aplicación: `heroku open`
 
 ## Available Scripts
 
@@ -28,43 +47,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
