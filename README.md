@@ -2,9 +2,84 @@
 
 Proyecto creado utilizando React (Javascript) como front-end y Firebase como back-end. El objetivo de la aplicación consiste en brindar a los usuarios la capacidad de poder observar, comprar y vender todo tipo de criptomonedas, incluyendo la capacidad de realizar transacciones utilizando métodos modernos de pago como lo es una "crypto-wallet".
 
-El proyecto puede ser accesado a través del siguiente [link](https://ecrypt-nc-g63.herokuapp.com/)
+![screenshot1](readme-assets/screenshot1.PNG)
 
-## Pasos para Deployment (Heroku)
+## Link
+
+El proyecto puede ser accesado a través del siguiente [link a Heroku](https://ecrypt-nc-g63.herokuapp.com/)
+
+----
+
+## Estructura de Carpetas
+
+```bash
+No Country - Cohorte 3 - ECrypt
+|
+├─ readme-assets: Imágenes y elementos en Readme
+├─ Procfile: Archivo usado por Heroku para el deployment
+|
+├─ public: Elementos estáticos
+│  ├─ favicon.ico
+│  ├─ index.html
+│  └─ robots.txt
+|
+├─ README.md
+|
+├─ server: Archivos para servidor estático usado en build de producción
+│  └─ server.js
+|
+└─ src: Código fuente para la aplicación
+   |
+   ├─ App
+   │  ├─ components
+   │  │  ├─ Acreditar
+   │  │  ├─ CardCheckout
+   │  │  ├─ Checkout
+   │  │  ├─ Header
+   │  │  ├─ Layout
+   │  │  ├─ Login
+   │  │  ├─ Moneda
+   │  │  ├─ Order
+   │  │  ├─ SignIn
+   │  │  ├─ SignUp
+   │  │  └─ TablaRegistro.jsx
+   |  |
+   │  ├─ Home
+   │  ├─ noticias
+   │  ├─ Page
+   |  |
+   │  └─ Routes: Diferentes rutas disponibles en la aplicación
+   │     └─ Index-Router.js
+   |
+   ├─ Assets
+   │  ├─ fondo.png
+   │  ├─ Frame.png
+   │  └─ Vector.png
+   |
+   ├─ Components
+   │  ├─ api
+   │  │  └─ apicrypto.js
+   │  └─ UI
+   |
+   ├─ firebase.js: Scripts relacionados con conexión a Firebase
+   ├─ helper
+   │  └─ chart.js
+   |
+   ├─ Images
+   |
+   ├─ index.css
+   ├─ index.js
+   |
+   ├─ Pages
+   │  └─ Wallet
+   │     ├─ WalletPage.js
+   │     └─ WalletPage.module.css
+   |
+   └─ store
+      └─ auth-context.js
+```
+
+## Deployment (Heroku)
 
 1. Moverse a la carpeta del proyecto `cd "CARPETA-PROYECTO"`
 2. Crear una cuenta de [Heroku](https://id.heroku.com/login) e instalar el Heroku CLI (Command Line Interface).
@@ -21,29 +96,18 @@ El proyecto puede ser accesado a través del siguiente [link](https://ecrypt-nc-
 13. "Pushear" los cambios de rama actual a Heroku: `git push heroku RAMA-A-SUBIR:main`
 14. Abrir la aplicación: `heroku open`
 
-## Available Scripts
+----
 
-In the project directory, you can run:
+## Probando Aplicación
 
-### `npm start`
+El proceso de probado de la aplicación se puede realizar de dos maneras distintas dependiendo de si se trata de un "build" para desarrollo o de un "build" de producción.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Desarrollo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Utilizar el comando `npm start`. Esto iniciará un servidor de desarrollo dentro de la ruta [http://localhost:3000](http://localhost:3000).
 
-### `npm test`
+### Producción
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Crear un "build" de producción utilizando `npm run build`. Esto une todos los archivos de javascript, css y html, para que sea mucho más eficiente presentarlos al momento de que un servidor los requiera.
+- Probar el nuevo build del servidor utilizando `node server/server.js`. Esto abrirá un servidor estático utilizando express.
+- Si el sitio funciona correctamente, puede realizarse un merge request al `master`. Cuando se haga el merge, heroku automáticamente realizará un nuevo deploy de la aplicación. Luego de aproximadamente 5 minutos, los cambios podrán observarse.
