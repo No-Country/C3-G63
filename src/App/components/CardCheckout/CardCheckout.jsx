@@ -1,23 +1,38 @@
 import {React, useState} from 'react';
+import TablaRegistro from '../TablaRegistro.jsx/TablaRegistro';
 import './CardCheckout.scss';
-import CardCheckoutCode from './CardCheckoutCode';
 
 
 const CardCheckout = () => {
 
-    /* Giro boton Formulario */
+    const [number, setNumber] = useState("");
+    const [buttonTurned, setButtonTurned] = useState(true);
+    const [turnCard, setTurnCard] = useState(true);
 
-    const [botonGirado, setbotonGirado] = useState (true);
+    const numberHandler = (event) => {
+        setNumber(event.target.value)
+    }
 
-    const giroBoton = () => {
-        setbotonGirado (!botonGirado);
-        console.log(botonGirado);
+    /* Turn Button / Form */
+    const myButton = () => {
+        setButtonTurned(!buttonTurned)
     };
+    const turnButton = buttonTurned ? 'btn-abrir-formulario active' : 'btn-abrir-formulario'
 
-    /*<CardCheckoutCode />*/
+    /* Turn Card */
+    const myCard = () => {
+        setTurnCard(!turnCard)
+    }
+    const cardTurned = turnCard ? 'tarjeta' : 'tarjeta active'
+
+    /* Months Select */
+    for (let i = 1; i <= 12; i++){
+        console.log(i)
+    }
+
     return (
     <div className='contenedor__checkout'>
-        <section className="tarjeta" id="tarjeta"> {/* EL .active se hace con JS */}
+        <section className={ cardTurned } onClick={ myCard } >
 
         {/* TARJETA DELANTERA */}
         <div className="delantera">
@@ -29,7 +44,7 @@ const CardCheckout = () => {
             <div className="datos">
                 <div className="grupo" id="numero">
                     <p className="label">Número tarjeta</p>
-                    <p className="numero">#### #### #### ####</p>
+                    <p className="numero">{number}</p>
                 </div>
 
                 <div className="flexbox">
@@ -78,18 +93,18 @@ const CardCheckout = () => {
 
         {/* BOTON FORMULARIO */}
         <div className="contenedor-btn">
-        <button className = { giroBoton ? 'btn-abrir-formulario active' : 'btn-abrir-formulario'} id="btn-abrir-formulario" onClick={giroBoton} >
-            <i class="fas fa-plus"></i>
+        <button className = {turnButton} onClick={myButton} >
+            <i className="fas fa-plus"></i>
         </button>
         </div>
 
 
             {/* FORMULARIO */}
-            <form action="" id="formulario-tarjeta" className = { giroBoton ? 'formulario-tarjeta active' : 'formulario-tarjeta'}>
+            <form action="" id="formulario-tarjeta" className = { buttonTurned ? 'formulario-tarjeta active' : 'formulario-tarjeta' }>
 
             <div className="grupo">
                 <label for="inputNumero">Número Tarjeta</label>
-                <input type="text" id="inputNumero" maxlength="19" autocomplete="off" />
+                <input value={number} onChange={numberHandler} type="text" id="inputNumero" maxlength="19" autocomplete="off" />
             </div>
 
             <div className="grupo">

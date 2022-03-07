@@ -53,28 +53,28 @@ const Header = () => {
   return (
     <div className="header" id="header">
       <nav className="nav container__header">
-        <a className="nav__logo">
+        <Link to="/" className="nav__logo">
           <img
             src="Crypt-logo.png"
             alt="Logo Criptomoneda"
             className="nav__crypt-logo"
           />
-        </a>
+        </Link>
 
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <a className="nav__link">
+              <Link to="/portfolio" className="nav__link">
                 <i className="fas fa-coins fa-2x"></i>
                 <span className="nav__name">Coins</span>
-              </a>
+              </Link>
             </li>
 
             <li className="nav__item">
-              <a className="nav__link">
+              <Link to="/" className="nav__link">
                 <i className="fas fa-suitcase fa-2x"></i>
                 <span className="nav__name">Portfolio</span>
-              </a>
+              </Link>
             </li>
 
             <li className="nav__item">
@@ -89,7 +89,7 @@ const Header = () => {
               </a>
             </li>
             {user && (
-              <button onClick={handleLogout}>
+              <button className="nav__link exit__button" onClick={handleLogout}>
                 <i className="fas fa-sign-out-alt fa-2x"></i>
                 <span className="nav__name">Exit </span>
               </button>
@@ -97,10 +97,10 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className="nav__item">
+        <div className="nav__item nav__login">
           <Link to="/ingreso" href="#login" className="nav__link">
-            <i className="fas fa-user  fa-2x"></i>
-            <span className="nav__name">{user ? user?.email : "Login"}</span>
+            {user ? <img src={user?.photoURL}/> :  <i className="fas fa-user  fa-2x"></i>}
+            <span className="nav__name">{user ? ( user?.displayName|| user?.email) : "Login"}</span>
           </Link>
         </div>
       </nav>

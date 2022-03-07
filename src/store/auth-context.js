@@ -1,7 +1,11 @@
-import { createContext, useEffect, useState } from "react";
+
+import React, { createContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+  signInWithPopup,
   onAuthStateChanged,
   signOut,
   GoogleAuthProvider,
@@ -23,17 +27,23 @@ export const AuthProvider = ({ children }) => {
   };
 
   const loginWithGoogle = () => {
-   const googleProvider =  new GoogleAuthProvider()
-   return signInWithPopup(auth, googleProvider)
-  }
+    const googleProvider = new GoogleAuthProvider();
+    return signInWithPopup(auth, googleProvider);
+  };
+
+
+  const loginWithFacebook = () => {
+    const facebookProvider = new FacebookAuthProvider();
+    return signInWithPopup(auth, facebookProvider);
+  };
 
   const logout = () => signOut(auth);
 
   useEffect(() => {
     onAuthStateChanged(auth, currentUser => {
-        setUser(currentUser);
+      setUser(currentUser);
     })
   }, []);
 
-  return <Context.Provider value={{ signup, login, logout, user, loginWithGoogle }}>{children}</Context.Provider>;
+  return <Context.Provider value={{ signup, login, loginWithGoogle, loginWithFacebook, logout, user }}>{children}</Context.Provider>;
 };

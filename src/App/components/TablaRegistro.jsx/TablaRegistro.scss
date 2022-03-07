@@ -12,13 +12,24 @@ $large-font-size: 1.5rem;
 $normal-font-size: 14px;
 $tiny-font-size: 0.6rem;
 
+.cryptoCtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+
+.cryptoCtn img {
+    width: 48px;
+    height: 55px;
+    object-fit: contain;
+}
 
 
 /* MAIN (RANKING CRYPTO) */
 
 .section {
-    padding: 2rem 0 2rem;
+    margin-bottom: 30px;
     font-family: 'Titillium Web';
 }
 
@@ -43,9 +54,10 @@ $tiny-font-size: 0.6rem;
     background: #fff;
     width: 100%;
     height: auto;
+    max-height: 700px;
     max-width: 700px;
     min-width: 290px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     border-radius: 10px;
     position: relative;
     box-shadow: 1px 8px 10px #888888;
@@ -55,38 +67,13 @@ $tiny-font-size: 0.6rem;
 
 .table__container {
     display: grid;
-    height: 500px;
-    width: 100%;
     max-width: 700px;
-    grid-template-columns: 5% 10% 20% 10% 10% 25% 10% 10%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     font-weight: 800;
     align-items: center;
     text-align: center;
-}
-
-
-.down {
-    i {
-        color: $red-color;
-    }
-}
-
-.up {
-    i {
-        color: $main-color;
-    }
-}
-
-.c2 {
-    i {
-        color: $gold-color;
-    }
-}
-
-.c4 {
-    i {
-        color: $main-color;
-    }
+    margin-bottom: 10px;
+    transition: 0.4s;
 }
 
 
@@ -97,10 +84,18 @@ $tiny-font-size: 0.6rem;
 @media screen and (max-width: 767px) {
 
     .table__container {
-        grid-template-columns: 20% 30% 10% 40%;
+        grid-template-columns: 30% 30% 40%;
+    }
+
+    .table {
+        width: 320px;
     }
 
     .magic{
         display: none;
+    }
+
+    .section {
+        margin-bottom: 75px;
     }
 }

@@ -1,79 +1,60 @@
-import React, {useContext, useState} from "react";
-import { Link, useNavigate} from "react-router-dom";
-import logo from '../../../Assets/Vector.png';
-import './Login.module.scss'
-import FacebookLogin from 'react-facebook-login';
-import GoogleLogin from "react-google-login";
-
-
-
-
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../../../store/auth-context";
+import logo from "../../../Assets/Vector.png";
+import "./Login.scss";
 
 
 const Login = () => {
-   
-
+  const authCtx = useContext(Context);
   const navigate = useNavigate();
 
-  const responseGoogle = (response) => {
-    console.log(response);
-  }
-
-    const responseFacebook = (response) => {
-      console.log(response);
+  const handleGoogleSignin = async () => {
+    try {
+      await authCtx.loginWithGoogle();
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
     }
+  };
 
-    const componentClicked = () =>{
-      console.log("Estas logueado")
+  const handleFacebookSignin = async () => {
+    try {
+      await authCtx.loginWithFacebook();
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
     }
-    
+  };
 
-    return (
-      <div className="container logoBox">
-          <div className="logoIcon">
-              <img src={logo} alt="logo"/>
-          </div>
-          <div className="logo_name">
-              <h1>Login</h1>
-          </div>
-          <div className="logo_box_info">
-            
-              <GoogleLogin
-              clientId="990173810108-o8a32tut813k0ulff95c1gldnk17occc.apps.googleusercontent.com"
-              render={renderProps => (
-                <button onClick={renderProps.onClick} disabled={renderProps.disabled}>Signin with Google</button>
-              )}
-              
-              onSuccess={responseGoogle}
-              onFailure={responseGoogle}
-              cookiePolicy={'single_host_origin'}
-              navigate={'/'}
-              
-              
-              
-              
-              />
-            <br/> 
-            
-            <FacebookLogin 
-              cssClass="facebook"
-              appId="538754370702621"
-              autoLoad={false}
-              fields="name,email,picture"
-              onClick={componentClicked('/')}
-              callback={responseFacebook}
-            
-            />
-              
-            <br/>
-            <Link to={`/logincorreo`}><button>Login with Email</button></Link>
-          </div>
+  return (
+    <div className="container logoBox">
+      <div className="logoIcon">
+        <img src={logo} alt="logo" />
       </div>
-      
-    )
-  
-}
-  
+      <div className="logo_name">
+        <h1>Login</h1>
+      </div>
+      <div className="logo_box_info">
+        <button className="login-button"
+          onClick={handleGoogleSignin}
+        >
+          Google login
+        </button>
+        <br />
+        <button className="login-button"
+          onClick={handleFacebookSignin}
+        >
+          Facebook login
+        </button>
 
+        <br />
+        <Link to={`/logincorreo`}>
+          <button className="login-button" >Login with Email</button>
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-export default Login
+export default Login;

@@ -7,7 +7,6 @@ import './Checkout.module.scss';
 const Checkout = () => {
   return (
     <div>
-        <Header />
         <CardCheckout />
     </div>
   )

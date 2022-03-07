@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# E-Crypt: Mercado de Criptomonedas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto creado utilizando React (Javascript) como front-end y Firebase como back-end. El objetivo de la aplicación consiste en brindar a los usuarios la capacidad de poder observar, comprar y vender todo tipo de criptomonedas, incluyendo la capacidad de realizar transacciones utilizando métodos modernos de pago como lo es una "crypto-wallet".
 
-## Available Scripts
+![screenshot1](readme-assets/screenshot1.PNG)
 
-In the project directory, you can run:
+## Link
 
-### `npm start`
+El proyecto puede ser accesado a través del siguiente [link a Heroku](https://ecrypt-nc-g63.herokuapp.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+----
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estructura de Carpetas
 
-### `npm test`
+```bash
+No Country - Cohorte 3 - ECrypt
+|
+├─ readme-assets: Imágenes y elementos en Readme
+├─ Procfile: Archivo usado por Heroku para el deployment
+|
+├─ public: Elementos estáticos
+│  ├─ favicon.ico
+│  ├─ index.html
+│  └─ robots.txt
+|
+├─ README.md
+|
+├─ server: Archivos para servidor estático usado en build de producción
+│  └─ server.js
+|
+└─ src: Código fuente para la aplicación
+   |
+   ├─ App
+   │  ├─ components
+   │  │  ├─ Acreditar
+   │  │  ├─ CardCheckout
+   │  │  ├─ Checkout
+   │  │  ├─ Header
+   │  │  ├─ Layout
+   │  │  ├─ Login
+   │  │  ├─ Moneda
+   │  │  ├─ Order
+   │  │  ├─ SignIn
+   │  │  ├─ SignUp
+   │  │  └─ TablaRegistro.jsx
+   |  |
+   │  ├─ Home
+   │  ├─ noticias
+   │  ├─ Page
+   |  |
+   │  └─ Routes: Diferentes rutas disponibles en la aplicación
+   │     └─ Index-Router.js
+   |
+   ├─ Assets
+   │  ├─ fondo.png
+   │  ├─ Frame.png
+   │  └─ Vector.png
+   |
+   ├─ Components
+   │  ├─ api
+   │  │  └─ apicrypto.js
+   │  └─ UI
+   |
+   ├─ firebase.js: Scripts relacionados con conexión a Firebase
+   ├─ helper
+   │  └─ chart.js
+   |
+   ├─ Images
+   |
+   ├─ index.css
+   ├─ index.js
+   |
+   ├─ Pages
+   │  └─ Wallet
+   │     ├─ WalletPage.js
+   │     └─ WalletPage.module.css
+   |
+   └─ store
+      └─ auth-context.js
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment (Heroku)
 
-### `npm run build`
+1. Moverse a la carpeta del proyecto `cd "CARPETA-PROYECTO"`
+2. Crear una cuenta de [Heroku](https://id.heroku.com/login) e instalar el Heroku CLI (Command Line Interface).
+3. Ingresar a Heroku desde la consola: `heroku login`
+4. Asegurarse de que exista un repo adentro de la carpeta de proyecto. En caso que no exista, inicializar el repo dentro de la misma carpeta en la que está el archivo `package.json`: `git init`
+5. Crear un proyecto dentro de Heroku (El nombre no es único para el usuario, sino para todos los usuarios de Heroku, por lo que puede que ya esté tomado): `heroku create APPNAME`
+6. Para corroborar que funciona se puede abrir la nueva app: `heroku open -a APPNAME`
+7. Se agrega el nuevo remoto de Heroku al repositorio local: `heroku git:remote -a APPNAME`
+8. Instalar express: `npm install express --save`.
+9. Crear un archivo para el servidor dentro de la carpeta `server`. [Utilizar express para crear un servidor estático](https://betterprogramming.pub/how-to-deploy-your-react-app-to-heroku-aedc28b218ae).
+10. Crear un "production build" de la aplicación: `npm run build`.
+11. Crear un Procfile, para indicarle a Heroku el comando a correr para hacer correr nuestro servidor estático.
+12. Configurar las variables de entorno adentro del archivo `.env` dentro de Heroku: `heroku config:set VARIABLE_NAME=value`
+13. "Pushear" los cambios de rama actual a Heroku: `git push heroku RAMA-A-SUBIR:main`
+14. Abrir la aplicación: `heroku open`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+----
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Probando Aplicación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+El proceso de probado de la aplicación se puede realizar de dos maneras distintas dependiendo de si se trata de un "build" para desarrollo o de un "build" de producción.
 
-### `npm run eject`
+### Desarrollo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Utilizar el comando `npm start`. Esto iniciará un servidor de desarrollo dentro de la ruta [http://localhost:3000](http://localhost:3000).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Producción
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Crear un "build" de producción utilizando `npm run build`. Esto une todos los archivos de javascript, css y html, para que sea mucho más eficiente presentarlos al momento de que un servidor los requiera.
+- Probar el nuevo build del servidor utilizando `node server/server.js`. Esto abrirá un servidor estático utilizando express.
+- Si el sitio funciona correctamente, puede realizarse un merge request al `master`. Cuando se haga el merge, heroku automáticamente realizará un nuevo deploy de la aplicación. Luego de aproximadamente 5 minutos, los cambios podrán observarse.

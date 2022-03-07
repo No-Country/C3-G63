@@ -1,27 +1,25 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
-import logo from '../../../Assets/Vector.png';
-import '../../../index.css'
-import './SignIn.module.scss'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../../../Assets/Vector.png";
+import "../../../index.css";
+import "./SignIn.scss";
 
 const SignIn = () => {
-
-
-
-
   return (
-    <div className='container logoBox'>
-        <div>
-            <img src={logo} alt="logo"/>
-        </div>
-        <div className='logo_box_info'>
-            <h1>Ingresa</h1>
-            <NavLink to={`/login`}><button>Login</button></NavLink>
-            <br/>
-            <NavLink to={`/registro`}><button>Sign In</button></NavLink>
-        </div>
+    <div className="signinCtn">
+      <div className="logoIcon">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className="btnCtn">
+        <NavLink to={`/login`}>
+          <button className="login-button">Login</button>
+        </NavLink>
+        <NavLink to={`/registro`}>
+          <button className="login-button">Sign Up</button>
+        </NavLink>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SignIn
+export default SignIn;
