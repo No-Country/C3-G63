@@ -35,13 +35,13 @@ const Login = () => {
         <h1>Login</h1>
       </div>
       <div className="logo_box_info">
-        <button
+        <button className="login-button"
           onClick={handleGoogleSignin}
         >
           Google login
         </button>
         <br />
-        <button
+        <button className="login-button"
           onClick={handleFacebookSignin}
         >
           Facebook login
@@ -49,7 +49,7 @@ const Login = () => {
 
         <br />
         <Link to={`/logincorreo`}>
-          <button>Login with Email</button>
+          <button className="login-button" >Login with Email</button>
         </Link>
       </div>
     </div>
