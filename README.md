@@ -18,7 +18,7 @@ El proyecto puede ser accesado a través del siguiente [link](https://ecrypt-nc-
 10. Crear un "production build" de la aplicación: `npm run build`.
 11. Crear un Procfile, para indicarle a Heroku el comando a correr para hacer correr nuestro servidor estático.
 12. Configurar las variables de entorno adentro del archivo `.env` dentro de Heroku: `heroku config:set VARIABLE_NAME=value`
-13. "Pushear" los cambios de rama actual a Heroku: `git push heroku master:main`
+13. "Pushear" los cambios de rama actual a Heroku: `git push heroku RAMA-A-SUBIR:main`
 14. Abrir la aplicación: `heroku open`
 
 ## Available Scripts
