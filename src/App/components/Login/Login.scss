@@ -29,7 +29,7 @@ $tiny-font-size: 0.6rem;
 
 .logo_box_info{
     width: 80%;
-    padding: 60px;
+    padding: 60px 0 60px 0;
     background-color: #FFFFFF;
     border: none;
     border-radius: 1.25rem;
@@ -40,16 +40,14 @@ $tiny-font-size: 0.6rem;
     background-image: url('../../../Assets/fondo.png');
     padding: 0.5rem 0 2rem;
     width: 100%;
-    height: 100vh;
-    
+    height: 80vh;
 }
 
 .logo_name{
     text-align: center;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    
+    margin: 0 auto 50px auto;
+    color: $main-color;
 }
 
 /*

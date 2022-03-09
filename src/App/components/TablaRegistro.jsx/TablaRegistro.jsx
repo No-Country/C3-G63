@@ -33,7 +33,7 @@ const TablaRegistro = () => {
   return (
     <div>
       <main>
-        <section className="container section section__height">
+        <section className="section section__height">
           <h2 className="section__title">Ranking Cryptos</h2>
 
           <div className="table">
@@ -53,7 +53,7 @@ const TablaRegistro = () => {
                   </div>
                   <div className="r1 c6">${el.price}</div>
                   <div className="r1 c8 magic">
-                    <Link to={`/ingreso`}>Buy</Link>
+                    <Link to={`/acreditar`}>Buy</Link>
                   </div>
                 </div>
               );

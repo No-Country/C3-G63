@@ -16,7 +16,7 @@ const SignIn = lazy(() => import('../components/SignIn/SignIn'));
 const SignUp = lazy(() => import('../components/SignUp/SignUp'));
 const WalletPage = lazy(() => import('../../Pages/Wallet/WalletPage'));
 const Moneda = lazy(() => import('../components/Moneda/Moneda'));
-const AcreditarView = lazy(() => import('../components/Acreditar/acreditarView'));
+const Acreditar = lazy(() => import('../components/Acreditar/acreditar'));
 
 export function App() {
 
@@ -26,7 +26,7 @@ export function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/acreditar" element={<AcreditarView />} />
+            <Route path="/acreditar" element={<Acreditar />} />
             <Route path="/portfolio" element={<WalletPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/registro" element={<SignUp />} />

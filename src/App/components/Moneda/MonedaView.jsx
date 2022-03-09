@@ -10,8 +10,8 @@ export const MonedaView = (props) => {
     <>
       <div className='fondo'>
         <div className='vent-compra'>
-          <h4>{`venta:4000$ (-1000) | Compra:42,000$(+100)`}</h4>
-          <img src={fondo} alt="" />
+          <h4 id='venta'>{`venta:4000$ (-1000) | Compra:42,000$(+100)`}</h4>
+          <img src={flecha} alt="" />
         </div>
         <div className='btn-vent'>
           <button className='btn-venta'>Venta</button>
@@ -35,7 +35,7 @@ export const MonedaView = (props) => {
         <div className='noticias'>
           <h1 className='h1N'>Noticias</h1>
           <div className='noticias-container'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p id='p-noti'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, laboriosam provident! Deserunt eum id enim ut numquam praesentium corrupti amet possimus.</p>
             <div className='noticias-images'>
               <img src={flecha} alt="" />
             </div>
@@ -43,7 +43,6 @@ export const MonedaView = (props) => {
         </div>
         <div className='container-info'>
           <h4 className='h4'>Ver mas Informacion</h4>
-
         </div>
       </div>
     </>

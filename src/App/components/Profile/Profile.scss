@@ -1,0 +1,112 @@
+$main-color: #009640;
+$secondary-color: #1D1D1B;
+$light-color: #C4C4C4;
+$gold-color: #F6AA47;
+$red-color: #af0000;
+$test-color: #FDF4DD;
+$text-color-dark: #000000;
+$text-color-light: #FFFFFF;
+
+.profile__container2 {
+
+    /* Esto se saca al final! */
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* Esto se saca al final! */
+
+    font-family: "Titillium Web";
+    z-index: 15;
+    width: 100%;
+    max-width: 320px;
+    height: 336px;
+    background-color: $text-color-light;
+    border: 1px solid $light-color;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 22px 20px 0 0;
+    .profile__title-container {
+        display: flex;
+        margin: 10px 0;
+        align-items: center;
+        img {
+            margin-left: auto;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
+        .profile__title {
+            color: $main-color;
+            font-weight: bold;
+        }
+    }
+    .profile__info-container {
+        .profile__item {
+            display: flex;
+            padding: 6px 0;
+            p{
+                font-size: 10px;
+            }
+            h3 {
+                font-size: 14px;
+            }
+            i:last-child {
+                display: flex;
+                color: $gold-color;
+                background-color: $text-color-light;
+                margin-left: auto;
+                align-items: center;
+                justify-content: center;
+                width: 45px;
+                height: 45px;
+                border: 2px solid $gold-color;
+                border-radius: 20%;
+                cursor: pointer;
+                &:hover {
+                    background-color: $gold-color;
+                    color: $text-color-light;
+                }
+            }
+        }
+    }
+}
+
+.profile__overlay {
+    width: 100%;
+    height: 100%;
+    display: none; /* CHANGE! */
+    position: fixed;
+    z-index: 14;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.profile__container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    min-width: 245px;
+    max-width: 320px;
+    height: 336px;
+    background-color: $text-color-light;
+    border: 1px solid $light-color;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: flex-start;
+    top: 63px;
+    left: 43px;
+    h1 {
+        font-size: 24px;
+        color: $main-color;
+        font-weight: bold;
+        padding: 10px 0 15px;
+    }
+    p {
+        font-size: 10px;
+    }
+    h3 {
+        font-size: 14px;
+        padding: 0 0 15px 0;
+    }
+}

@@ -2,6 +2,10 @@
   border-radius: 12px;
   box-shadow: 0px 4px 2px 2px #009640;
   padding: 30px;
+  display: flex;
+  margin: auto;
+  width: 75%;
+  flex-direction: column;
 }
 
 h4 {
@@ -45,7 +49,10 @@ h4 {
 .container {
   border-radius: 12px;
   box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.2);
-  width: 100%;
+  display: grid;
+  margin: auto;
+  width: 75%;
+  margin-top: 15px;
 }
 
 .h1E {
@@ -79,15 +86,21 @@ h4 {
   border-radius: 12px;
 }
 
+/*
+No usar selectores de elementos
 h2 {
   margin: auto;
   display: flex;
 }
+*/
 
 .noticias {
   box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   padding: 20px;
+  margin: auto;
+  width: 75%;
+  margin-top: 15px;
 }
 
 .noticias-container {
@@ -125,9 +138,9 @@ h2 {
   display: flex;
   background: #009640;
   border-radius: 12px;
-  width: 100%;
-  height: 80px;
   margin: auto;
+  width: 75%;
+  height: 80px;
   margin-top: 10px;
 }
 
@@ -140,4 +153,44 @@ h2 {
   height: 50px;
   margin: auto;
   align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .vent-compra {
+    width: 90%;
+  }
+
+  #venta {
+    height: 40px;
+    width: 290px;
+    display: flex;
+    align-self: center;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .noticias {
+    width: 90%;
+  }
+
+  .container-info {
+    width: 90%;
+  }
+
+  .noticias-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+  }
+
+  #p-noti {
+    font-size: 12px;
+    width: 100%;
+    height: 50px;
+    align-self: flex-end;
+    display: flex;
+  }
 }
