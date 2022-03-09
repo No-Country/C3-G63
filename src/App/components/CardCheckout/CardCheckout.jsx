@@ -119,7 +119,7 @@ const CardCheckout = () => {
 
             <div className="grupo">
                 <label for="inputNumero">Credit / Debit Card Number</label>
-                <input value={number} onChange={numberHandler} type="number" id="inputNumero" maxlength="16" autocomplete="off" />
+                <input value={number} onChange={numberHandler} type="text" id="inputNumero" maxlength="16" autocomplete="off" />
             </div>
 
             <div className="grupo">
@@ -170,7 +170,7 @@ const CardCheckout = () => {
 
                 <div className="grupo ccv">
                     <label for="inputCCV">CCV</label>
-                    <input type="number" id="inputCCV" maxlength="3" value={myCode} onChange={codeHandler} />
+                    <input type="text" id="inputCCV" maxlength="3" value={myCode} onChange={codeHandler} />
                 </div>
             </div>
 

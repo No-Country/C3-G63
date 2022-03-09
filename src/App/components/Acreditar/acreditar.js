@@ -1,14 +1,14 @@
 import React from 'react';
-import { AcreditarView } from './Acreditar';
+import { AcreditarView } from './acreditarView';
 import swal from 'sweetalert';
 
-export const Acreditar = () => {
-
+const Acreditar = () => {
+  /*
   const [acreditar, setAcreditar] = useState(false);
   const [configuracion, setConfiguracion] = useState(false);
   const [logo, setLogo] = useState(0);
   const [name, setName] = useState('');
-
+  */
   const alertClick = () => {
     swal({
       title: "¿Estas seguro?",
@@ -21,6 +21,7 @@ export const Acreditar = () => {
 
   return (
     <AcreditarView
+      /*
       acreditar={acreditar}
       configuracion={configuracion}
       logo={logo}
@@ -28,9 +29,12 @@ export const Acreditar = () => {
       setAcreditar={setAcreditar}
       setConfiguracion={setConfiguracion}
       setLogo={setLogo}
-      setNome={setName}
+      setName={setName}
       list={list}
+      */
       alertClick={alertClick}
     />
   );
 };
+
+export default Acreditar
