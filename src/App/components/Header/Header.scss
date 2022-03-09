@@ -24,7 +24,7 @@ $tiny-font-size: 0.6rem;
   box-shadow: 1px 4px 10px #888888;
   z-index: 10;
   transition: 0.4s;
-  border-radius: 1.25rem;
+  border-radius: 10px;
   border: 1px solid $light-color;
   margin: 22px auto 0px auto;
 }
@@ -35,7 +35,6 @@ $tiny-font-size: 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 /* Mobile Bottom Nav */
@@ -43,16 +42,16 @@ $tiny-font-size: 0.6rem;
   .nav__menu {
     position: fixed;
     bottom: 0;
-    background-color: $text-color-light;
-    box-shadow: 1px -5px 10px #888888;
+    background-color: $main-color;
+    box-shadow: 1px 4px 10px #888888;
     width: 320px;
     height: 83px;
     padding: 0 1rem;
+    margin-bottom: 22px;
     display: grid;
     align-content: center;
-    border-radius: 1.25rem 1.25rem 0 0;
+    border-radius: 10px;
     transition: 0.4s;
-    margin-left: 0;
   }
 
   .header {
@@ -69,21 +68,59 @@ $tiny-font-size: 0.6rem;
   flex-direction: column;
   align-items: center;
   row-gap: 0.3rem;
-  color: $text-color-dark;
   font-weight: 600;
+  color: $text-color-dark;
+  img {
+    width: 40%;
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 767px) {
+    color: $text-color-light;
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
 }
 
 .nav__list {
   justify-content: space-between;
-  padding: 0 10px;
+  /*padding: 0 10px;*/
+  .nav__item {
+    &:hover{
+      border: 2px solid $gold-color;
+      &:active {
+        background-color: $text-color-light;
+      }
+      .nav__link {
+        color: $gold-color;
+      }
+    }
+  } 
 }
 
 .nav__name {
   font-size: 14px;
+  padding-top: 5px;
+}
+
+.nav__name-user {
+  font-size: 14px;
+  padding-top: 5px;
+  @media screen and (max-width: 767px) {
+    display: none;
+    }
 }
 
 .nav__item {
-  padding: 0 10px;
+  padding: 7px 10px;
+  cursor: pointer;
+  @media screen and (max-width: 767px) {
+    border: 1px solid $text-color-light;
+    border-radius: 10px;
+    width: 70px;
+    height: 60px;
+  }
 }
 
 .nav__logo {
@@ -94,30 +131,40 @@ $tiny-font-size: 0.6rem;
   }
 }
 
-.nav__link {
-  i:hover {
-    color: $main-color;
-    &:active {
-      color: $gold-color;
-    }
-  }
-}
-
-
-.nav__link img {
-  width: 50%;
-  border-radius: 50%;
-}
-
 .nav__link span {
   margin-top: -10px;
 }
 
 .exit__button {
+  width: 70px;
+  height: 60px;
   border: none;
   outline: inherit;
+  cursor: pointer;
+  justify-content: center;
+  background-color: $main-color;
+  border: 1px solid $text-color-light;
+  border-radius: 10px;
+  &:hover {
+    color: $gold-color;
+    border: 2px solid $gold-color;
+    &:active {
+      background-color: $text-color-light;
+    }
+  }
 }
 
 .nav__login {
   margin-right: 20px;
+  @media screen and (max-width: 767px) {
+    .nav__link {
+      color: $text-color-dark;
+    }
+  }
+}
+
+.nav__search {
+  border: none;
+  outline: inherit;
+  background-color: $main-color;
 }

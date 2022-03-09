@@ -33,7 +33,7 @@ const TablaRegistro = () => {
   return (
     <div>
       <main>
-        <section className="container section section__height">
+        <section className="section section__height">
           <h2 className="section__title">Ranking Cryptos</h2>
 
           <div className="table">

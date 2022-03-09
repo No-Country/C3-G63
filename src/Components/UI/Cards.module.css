@@ -11,6 +11,7 @@
   background-color: #fff;
   display: flex;
   width: 100%;
+  min-width: 320px;
   height: 121px;
   justify-content: space-around;
   align-items: center;
@@ -29,8 +30,8 @@
 }
 
 .cryptoCtn img {
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 55px;
   object-fit: contain;
 }
 
@@ -41,8 +42,9 @@
 
 
 .price {
-  font-size: larger;
+  font-size: 16px;
   font-weight: 800;
+  color: #009640;
 }
 
 .btnCtn {
