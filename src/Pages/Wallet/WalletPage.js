@@ -31,6 +31,7 @@ const WalletPage = () => {
     return (
         <>
         <div className={styles.walletCtn}>
+            {/*<h1>Portfolio</h1>*/}
             <Cards data={data}/>
         </div>
         </>

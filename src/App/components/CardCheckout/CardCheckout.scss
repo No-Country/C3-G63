@@ -40,6 +40,9 @@
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 10px 10px rgba(90, 116, 148, 0.3);
+    @media screen and (max-width: 767px) {
+        min-height: 200px;
+    }
 }
 
 .tarjeta .delantera {
@@ -285,4 +288,10 @@
 
 .formulario-tarjeta .btn-enviar:hover {
     background: #005c28;
+}
+
+.firma{
+    p {
+        font-family: 'Liu Jian Mao Cao', cursive;
+    }
 }

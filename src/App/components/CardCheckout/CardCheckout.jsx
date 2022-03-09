@@ -1,16 +1,35 @@
 import {React, useState} from 'react';
-import TablaRegistro from '../TablaRegistro.jsx/TablaRegistro';
 import './CardCheckout.scss';
 
 
 const CardCheckout = () => {
 
-    const [number, setNumber] = useState("");
-    const [buttonTurned, setButtonTurned] = useState(true);
+    const [number, setNumber] = useState("")
+    const [buttonTurned, setButtonTurned] = useState(true)
     const [turnCard, setTurnCard] = useState(true);
+    const [cardInfoName, setCardInfoName] = useState("")
+    const [month, setMonth] = useState("")
+    const [myYear, setMyYear] = useState("")
+    const [myCode, setMyCode] = useState("")
 
     const numberHandler = (event) => {
         setNumber(event.target.value)
+    }
+
+    const nameCardHandler = (event) => {
+        setCardInfoName(event.target.value)
+    }
+
+    const monthHandler = (event) => {
+        setMonth(event.target.value)
+    }
+
+    const yearHandler = (event) => {
+        setMyYear(event.target.value)
+    }
+
+    const codeHandler = (event) => {
+        setMyCode(event.target.value)
     }
 
     /* Turn Button / Form */
@@ -25,10 +44,6 @@ const CardCheckout = () => {
     }
     const cardTurned = turnCard ? 'tarjeta' : 'tarjeta active'
 
-    /* Months Select */
-    for (let i = 1; i <= 12; i++){
-        console.log(i)
-    }
 
     return (
     <div className='contenedor__checkout'>
@@ -44,19 +59,19 @@ const CardCheckout = () => {
             <div className="datos">
                 <div className="grupo" id="numero">
                     <p className="label">Número tarjeta</p>
-                    <p className="numero">{number}</p>
+                    <p className="numero">{number ? number : "#### #### #### ####"}</p>
                 </div>
 
                 <div className="flexbox">
                     <div className="grupo" id="nombre">
                         <p className="label">Nombre Tarjeta</p>
-                        <p className="nombre">Jhon Doe</p>
+                        <p className="nombre">{cardInfoName ? cardInfoName : "Jhon Doe"}</p>
                     </div>
 
                     <div className="grupo" id="expiracion">
                         <p className="label">Expiracion</p>
                         <p className="expiracion">
-                            <span className="mes">MM</span> / <span className="year">AA</span>
+                            <span className="mes">{month ? month : "MM"}</span> / <span className="year">{myYear ? myYear : "AA"}</span>
                         </p>
                     </div>
                 </div>
@@ -73,12 +88,12 @@ const CardCheckout = () => {
                 <div className="grupo" id="firma">
                     <p className="label">Firma</p>
                     <div className="firma">
-                        <p></p>
+                        <p>{cardInfoName ? cardInfoName : "Jhon Doe"}</p>
                     </div>
                 </div>
                 <div className="grupo" id="ccv">
                     <p className="label">CCV</p>
-                    <p className="ccv"></p>
+                    <p className="ccv">{myCode ? myCode : ""}</p>
                 </div>
             </div>
 
@@ -103,31 +118,50 @@ const CardCheckout = () => {
             <form action="" id="formulario-tarjeta" className = { buttonTurned ? 'formulario-tarjeta active' : 'formulario-tarjeta' }>
 
             <div className="grupo">
-                <label for="inputNumero">Número Tarjeta</label>
-                <input value={number} onChange={numberHandler} type="text" id="inputNumero" maxlength="19" autocomplete="off" />
+                <label for="inputNumero">Credit / Debit Card Number</label>
+                <input value={number} onChange={numberHandler} type="number" id="inputNumero" maxlength="16" autocomplete="off" />
             </div>
 
             <div className="grupo">
-                <label for="inputNombre">Nombre</label>
-                <input type="text" id="inputNombre" maxlength="19" autocomplete="off" />
+                <label for="inputNombre">Name</label>
+                <input type="text" id="inputNombre" maxlength="19" autocomplete="off" value={cardInfoName} onChange={nameCardHandler} />
             </div>
 
             <div className="flexbox">
 
                 <div className="grupo expira">
-                    <label for="selectMes">Expiracion</label>
+                    <label for="selectMes">Exp.</label>
                     <div className="flexbox">
                         
                         <div className="grupo-select">
-                            <select name="mes" id="selectMes">
-                                <option disabled selected>Mes</option>
+                            <select name="mes" id="selectMes" value={month} onChange={monthHandler} >
+                                <option disabled selected>Month</option>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
                             </select>
                             <img src="" alt="" />
                         </div>
 
                         <div className="grupo-select">
-                            <select name="year" id="selectYear">
-                                <option disabled selected>Año</option>
+                            <select name="year" id="selectYear" value={myYear} onChange={yearHandler}>
+                                <option disabled selected>Year</option>
+                                <option value="22">2022</option>
+                                <option value="23">2023</option>
+                                <option value="24">2024</option>
+                                <option value="25">2025</option>
+                                <option value="26">2026</option>
+                                <option value="27">2027</option>
+                                <option value="28">2028</option>
                             </select>
                             <img src="" alt="" />
                         </div>
@@ -136,7 +170,7 @@ const CardCheckout = () => {
 
                 <div className="grupo ccv">
                     <label for="inputCCV">CCV</label>
-                    <input type="text" id="inputCCV" maxlength="3" />
+                    <input type="number" id="inputCCV" maxlength="3" value={myCode} onChange={codeHandler} />
                 </div>
             </div>
 

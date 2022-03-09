@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../../../store/auth-context";
 import { Link } from "react-router-dom";
+import Profile from "../Profile/Profile";
 import "./Header.scss";
+import BackDrop from "./BackDrop";
 
 const Header = () => {
   const { user, logout } = useContext(Context);
+  const [toggleProfile, setToggleProfile] = useState(false);
 
   const handleLogout = async () => {
     try {
@@ -14,7 +17,20 @@ const Header = () => {
     }
   };
 
+  const toggleHandler = () => {
+    setToggleProfile(true);
+    console.log(toggleProfile);
+  };
+
+  console.log(user)
+
+  const closeProfileHandler = () => {
+    setToggleProfile(false)
+  }
+
   return (
+    <>
+    {toggleProfile && <BackDrop onClick={closeProfileHandler} /> }
     <div className="header" id="header">
       <nav className="nav container__header">
         <Link to="/" className="nav__logo">
@@ -28,24 +44,24 @@ const Header = () => {
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <Link to="/portfolio" className="nav__link">
+              <Link to="/" className="nav__link">
                 <i className="fas fa-coins fa-2x"></i>
                 <span className="nav__name">Coins</span>
               </Link>
             </li>
 
             <li className="nav__item">
-              <Link to="/" className="nav__link">
+              <Link to="/portfolio" className="nav__link">
                 <i className="fas fa-suitcase fa-2x"></i>
                 <span className="nav__name">Portfolio</span>
               </Link>
             </li>
 
             <li className="nav__item">
-              <a className="nav__link">
+              <button className="nav__link nav__search">
                 <i className="fas fa-search fa-2x"></i>
                 <span className="nav__name">Search</span>
-              </a>
+              </button>
             </li>
             {user && (
               <button className="nav__link exit__button" onClick={handleLogout}>
@@ -57,13 +73,24 @@ const Header = () => {
         </div>
 
         <div className="nav__item nav__login">
-          <Link to="/ingreso" href="#login" className="nav__link">
-            {user ? <img src={user?.photoURL}/> :  <i className="fas fa-user  fa-2x"></i>}
-            <span className="nav__name">{user ? ( user?.displayName|| user?.email) : "Login"}</span>
-          </Link>
+          {!user ? (
+            <Link to="/ingreso" href="#login" className="nav__link">
+              <i className="fas fa-user  fa-2x"></i>
+              <span>Login</span>
+            </Link>
+          ) : (
+            <div className="nav__link" onClick={toggleHandler}>
+              <img src={user?.photoURL} />
+              <span className="nav__name-user">
+                {user?.displayName || user?.email}
+              </span>
+            </div>
+          )}
+          {toggleProfile && <Profile />}
         </div>
       </nav>
     </div>
+    </>
   );
 };
 

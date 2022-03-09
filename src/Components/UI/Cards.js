@@ -29,8 +29,8 @@ const Cards = ({ data }) => {
                       },
                     ]}
                     type="line"
-                    width="140"
-                    height="150"
+                    width="110"
+                    height="120"
                   />
                 </div>
               </div>
