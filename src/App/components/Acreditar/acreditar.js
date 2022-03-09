@@ -1,5 +1,5 @@
 import React from 'react';
-import { AcreditarView } from './acreditar';
+import { AcreditarView } from './Acreditar';
 
 const Acreditar = () => {
 
