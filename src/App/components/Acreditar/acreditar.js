@@ -1,7 +1,7 @@
 import React from 'react';
 import { AcreditarView } from './acreditar';
 
-export const Acreditar = () => {
+const Acreditar = () => {
 
   const [acreditar, setAcreditar] = useState(false);
   const [configuracion, setConfiguracion] = useState(false);
@@ -22,3 +22,5 @@ export const Acreditar = () => {
     />
   );
 };
+
+export default Acreditar;
