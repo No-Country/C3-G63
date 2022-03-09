@@ -2,19 +2,12 @@ import React from 'react';
 import flecha from '../../../Images/flecha.png';
 import usuario from '../../../Images/usuario.png';
 import './acreditar.scss';
-import swal from 'sweetalert';
 
-export const AcreditarView = props => {
-  const alertClick = () => {
-    swal({
-      title: "¿Estas seguro?",
-      text: "Una vez acreditado no podras revertir el cambio",
-      icon: "warning",
-      buttons: ["NO", "Aceptar"],
-      dangerMode: true,
-    })
-  }
+export const AcreditarView = (props) => {
 
+  const { alertClick } = props;
+
+  console.log("🚀 ~ ", props)
   return (
     <>
       <div className='Container-Acreditar'>
