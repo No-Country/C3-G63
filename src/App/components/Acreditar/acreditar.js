@@ -1,5 +1,6 @@
 import React from 'react';
 import { AcreditarView } from './Acreditar';
+import swal from 'sweetalert';
 
 const Acreditar = () => {
 
@@ -7,6 +8,16 @@ const Acreditar = () => {
   const [configuracion, setConfiguracion] = useState(false);
   const [logo, setLogo] = useState(0);
   const [name, setName] = useState('');
+
+  const alertClick = () => {
+    swal({
+      title: "¿Estas seguro?",
+      text: "Una vez acreditado no podras revertir el cambio",
+      icon: "warning",
+      buttons: ["NO", "Aceptar"],
+      dangerMode: true,
+    })
+  }
 
   return (
     <AcreditarView
@@ -19,6 +30,7 @@ const Acreditar = () => {
       setLogo={setLogo}
       setNome={setName}
       list={list}
+      alertClick={alertClick}
     />
   );
 };

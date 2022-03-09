@@ -20,16 +20,16 @@ $tiny-font-size: 0.6rem;
 
 
 .cryptoCtn img {
-    width: 80px;
-    height: 80px;
+    width: 48px;
+    height: 55px;
     object-fit: contain;
-  }
+}
 
 
 /* MAIN (RANKING CRYPTO) */
 
 .section {
-    padding: 2rem 0 2rem;
+    margin-bottom: 30px;
     font-family: 'Titillium Web';
 }
 
@@ -54,9 +54,10 @@ $tiny-font-size: 0.6rem;
     background: #fff;
     width: 100%;
     height: auto;
+    max-height: 700px;
     max-width: 700px;
     min-width: 290px;
-    padding: 10px 10px 65px 10px;
+    padding: 10px;
     border-radius: 10px;
     position: relative;
     box-shadow: 1px 8px 10px #888888;
@@ -72,31 +73,7 @@ $tiny-font-size: 0.6rem;
     align-items: center;
     text-align: center;
     margin-bottom: 10px;
-}
-
-
-.down {
-    i {
-        color: $red-color;
-    }
-}
-
-.up {
-    i {
-        color: $main-color;
-    }
-}
-
-.c2 {
-    i {
-        color: $gold-color;
-    }
-}
-
-.c4 {
-    i {
-        color: $main-color;
-    }
+    transition: 0.4s;
 }
 
 
@@ -110,7 +87,15 @@ $tiny-font-size: 0.6rem;
         grid-template-columns: 30% 30% 40%;
     }
 
+    .table {
+        width: 320px;
+    }
+
     .magic{
         display: none;
+    }
+
+    .section {
+        margin-bottom: 75px;
     }
 }
