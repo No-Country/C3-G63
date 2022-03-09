@@ -7,39 +7,11 @@ import "./Header.scss";
 const Header = () => {
   const { user, logout } = useContext(Context);
 
-  const [coin, setCoin] = useState([])
-  const [search, setSearch] = useState("");
   
-
   
-
-  const busqueda = async () => {
-    await axios.get("https://crypto-app-b0955-default-rtdb.firebaseio.com/crypto.json")
-    .then(response=>{
-      setSearch(response.data)
-    }).catch(error=>{
-      console.log(error)
-    })
-  }
   
-  const handleChange=e=>{
-    setSearch(e.target.value)
-    filtrar(e.target.value)
-  }
-
-  useEffect(() => {
-    busqueda();
-  }, [])
   
-  const filtrar = (monedaBusqueda) => {
-
-    var resultadoBusqueda = coin.height.filter((element) =>{
-      if(element.height.toString().toLowerCase().includes(monedaBusqueda.toLowerCase())){
-        return element;
-      }
-    })
-    setCoin(resultadoBusqueda);
-  }
+  
 
   const handleLogout = async () => {
     try {

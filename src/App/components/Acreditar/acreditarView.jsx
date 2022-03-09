@@ -34,9 +34,7 @@ export const AcreditarView = props => {
           <div className='btn-1'>
             <button> Tarjeta de Crédito/Débito</button>
           </div>
-          <div className='btn-2' onClick={alertClick}>
-            <button> Crypto Wallet</button>
-          </div>
+          
         </div>
       </div>
     </>
