@@ -9,7 +9,7 @@ const Header = () => {
 
   const [coin, setCoin] = useState([])
   const [search, setSearch] = useState("");
-  const [highNav, setHighNav] = useState(true)
+  
 
   
 
@@ -80,12 +80,12 @@ const Header = () => {
             <li className="nav__item">
               <a className="nav__link">
                 <i onClick={""} className="fas fa-search fa-2x"></i>
-                <span className="nav__name"
+                <input className="nav__name"
                   onChange={handleChange}
                   value={search}
                   
                 
-                > Search </span>
+                /> Search
               </a>
             </li>
             {user && (
