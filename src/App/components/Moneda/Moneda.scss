@@ -1,90 +1,249 @@
-.vent-compra {
-  border-radius: 12px;
-  box-shadow: 0px 4px 2px 2px #009640;
-  padding: 30px;
+.fondo {
+
   display: flex;
-  margin: auto;
-  width: 75%;
   flex-direction: column;
-}
-
-h4 {
-  display: flex;
   justify-content: center;
+  align-items: center;
+
+  // Margen y padding
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+  // ===================
+  // Sección de gráfica y precios
+  .vent-compra {
+
+    // Color
+    background-color: white;
+    box-shadow: 0px 4px 0px 5px #009640;
+  
+    // Forma
+    border-radius: 12px;
+    width: 73%;
+    max-width: 700px;
+  
+    // Margen y Padding
+    padding: 3rem 4rem 2rem 4rem;
+    margin-top: 3rem;
+
+    .grafica {
+
+      // Forma
+      width: 100%;
+      aspect-ratio: 1 / 0.5;
+      border-radius: 12px;
+
+      // Color
+      background-color: #f6aa47;
+
+      // Padding y margen
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+  }
+
+  // ======================
+  // Sección de botones de compra y venta
+  .btn-vent {
+
+    // Flex settings
+    display: flex;
+    justify-content: space-around;
+
+    // Tamaño
+    width: 73%;
+    max-width: 700px;
+
+    // Margen y padding
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    // Ambos Botones
+    .btn {
+
+      // Forma
+      width: 48%;
+
+      // Texto
+      font-weight: bold;
+      font-size: 1.2rem;
+
+      // Decoración
+      border: none;
+      border-radius: 8px;
+
+      // Margen y padding
+      padding: 1rem;
+    }
+
+    .btn-venta {
+      background-color: #f6aa47;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #ff9100;
+      }
+    }
+    
+    .btn-compra {
+      background: #c4c4c4;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: #8b8b8b;
+      }
+    }
+
+  }
+
+  // ===================
+  // Estadísticas
+  .estadisticas {
+
+    // Forma:
+    width: 73%;
+    max-width: 700px;
+
+    // Decoración
+    border-radius: 12px;
+    box-shadow: 0px 4px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+
+    // Flex settings
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Padding y margen
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    h1 {
+      color: #009640;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    // Contenedor de cada fila en las estadísticas
+    .Container-Grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      // Tamaño
+      width: 80%;
+
+      // Margen y padding
+      padding: 0.5rem;
+    }
+
+    // Nombre de estadística
+    .Moneda__item__name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    
+    // Números de estadísticas
+    .Moneda__item__number {
+
+      // Flex settings
+      display: flex;
+      justify-content: flex-end;
+      align-content: center;
+
+      // Decoration
+      border: 1px solid #f6aa47;
+      border-radius: 10px;
+
+      // Tamaño
+      width: 30%;
+
+      // Padding y margen
+      padding: 0.5rem;
+    }
+    
+  }
+
+  // ===================
+  // Noticias
+  .noticias {
+
+    // Decoración
+    box-shadow: 0px 4px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    background-color: white;
+
+    // Tamaño
+    width: 73%;
+    max-width: 700px;
+
+    // Padding y margen
+    padding: 3rem;
+    margin: auto;
+    margin-top: 15px;
+
+    // Texto de la noticia
+    .noticias-text {
+
+      padding: 1rem;
+
+      h1 {
+        color: #009640;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+
+    }
+ 
+    // Flecha de la noticia
+    .noticias-container {
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .noticias-images {
+
+        // Decoración
+        background: #f6aa47;
+        border-radius: 12px;
+
+        // Tamaño
+        width: 100px;
+        height: 100px;
+        aspect-ratio: 1;
+
+        // Flex settings
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // Animación
+        transition: all 0.3s ease-in-out;
+
+        img {
+          width: 50%;
+          object-fit: contain;
+          margin: auto;
+          transform: rotate(180deg);
+        }
+
+        &:hover {
+          background: #f8930e;
+        }
+
+      }
+
+    }
+
+  }
+
 }
 
-.btn-vent {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 12px;
-}
-
-.btn-venta {
-  background: #f6aa47;
-  border: none;
-  border-radius: 5px;
-  width: 100px;
-  height: 35px;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.btn-compra {
-  background: #c4c4c4;
-  border: none;
-  border-radius: 5px;
-  width: 100px;
-  height: 35px;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.vent-compra img {
-  width: 10%;
-  display: flex;
-  object-fit: contain;
-  margin: auto;
-}
-
-.container {
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.2);
-  display: grid;
-  margin: auto;
-  width: 75%;
-  margin-top: 15px;
-}
-
-.h1E {
-  display: flex;
-  justify-content: flex-end;
-  width: 50%;
-  color: #009640;
-}
-
-.Container-Grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 80%;
-  height: 80px;
-  margin: auto;
-}
-
-.Moneda__item__name {
-  font-size: 1rem;
-  font-weight: bold;
-  justify-self: flex-start;
-}
-
-.Moneda__item__number {
-  justify-items: flex-end;
-  display: flex;
-  border: 1px solid #f6aa47;
-  width: 45px;
-  height: 38px;
-  justify-self: end;
-  border-radius: 12px;
-}
 
 /*
 No usar selectores de elementos
@@ -93,46 +252,6 @@ h2 {
   display: flex;
 }
 */
-
-.noticias {
-  box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  padding: 20px;
-  margin: auto;
-  width: 75%;
-  margin-top: 15px;
-}
-
-.noticias-container {
-  display: flex;
-  width: 95%;
-  align-items: baseline;
-  margin: auto;
-  margin-top: -40px;
-}
-
-.noticias-images {
-  background: #f6aa47;
-  border-radius: 12px;
-  width: 100px;
-  height: 50px;
-  display: flex;
-  margin-left: auto;
-}
-
-.noticias-images img {
-  width: 50%;
-  display: flex;
-  object-fit: contain;
-  margin: auto;
-}
-
-.h1N {
-  display: flex;
-  justify-content: end;
-  width: 40%;
-  color: #009640;
-}
 
 .container-info {
   display: flex;
