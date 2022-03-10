@@ -1,0 +1,16 @@
+.walletCtn {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 122px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+    .walletCtn {
+        padding-bottom: 0px;
+    }
+}
+

@@ -6,7 +6,7 @@ const noticias = () => {
     <div>
         <Header />
         <h1>
-          
+          Noticias
         </h1>
     </div>
   )
