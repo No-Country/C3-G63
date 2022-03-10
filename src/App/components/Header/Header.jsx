@@ -81,9 +81,6 @@ const Header = () => {
           ) : (
             <div className="nav__link" onClick={toggleHandler}>
               <img src={user?.photoURL} />
-              <span className="nav__name-user">
-                {user?.displayName || user?.email}
-              </span>
             </div>
           )}
           {toggleProfile && <Profile />}

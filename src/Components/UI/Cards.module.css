@@ -60,12 +60,23 @@
   border-radius: 10px;
 }
 
+
 .btnPrimary {
   background-color: #f6aa47;
 }
 
+.btnPrimary:hover {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
 .btnSecondary {
   background-color: #c4c4c4;
+}
+
+.btnSecondary:hover {
+  background-color: #ffffff;
+  border: 1px solid #000000;
 }
 
 /* MEDIA QUERIES */
