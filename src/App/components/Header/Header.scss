@@ -8,7 +8,8 @@ $text-color-light: #ffffff;
 
 $large-font-size: 1.5rem;
 $normal-font-size: 14px;
-$tiny-font-size: 0.6rem;
+$tiny-font-size: 0.6rem; 
+
 
 /* LAYOUT */
 .container__header {
@@ -179,11 +180,6 @@ $tiny-font-size: 0.6rem;
   cursor: pointer;
   border: none;
   outline: inherit;
-  background-color: $text-color-light;
-  @media screen and (max-width: 767px) {
-    background-color: #009640;
-    &:active {
-      background-color: $text-color-light;
-    }
-  }
+  background-color: $main-color;
 }
+
