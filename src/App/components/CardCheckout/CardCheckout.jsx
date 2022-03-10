@@ -13,11 +13,32 @@ const CardCheckout = () => {
     const [myCode, setMyCode] = useState("")
 
     const numberHandler = (event) => {
-        setNumber(event.target.value)
+
+        // Guardar el valor de la tarjeta
+        let numTarjeta = event.target.value;
+
+        // Elimina los espacios del string para re-aplicarlos luego
+        numTarjeta = numTarjeta.replace(/\s/g, '');
+
+        // Solo permitir números en el input
+        numTarjeta = numTarjeta.replace(/[^0-9]/g, '');
+
+        // Insertar (Usando expresiones regulares), cada 4 caracteres un espacio.
+        let numTarjetaFormateado = numTarjeta.replace(/.{4}/g, '$& ');
+
+        // Eliminar los "trailing spaces" si hay más de 19 caracteres
+        if (numTarjetaFormateado.length > 19) {
+            numTarjetaFormateado = numTarjetaFormateado.trim()
+        }
+
+        // Cambiar el valor a mostrar en la tarjeta
+        setNumber(numTarjetaFormateado);
     }
 
     const nameCardHandler = (event) => {
-        setCardInfoName(event.target.value)
+
+        const nombreTarjeta = event.target.value;
+        setCardInfoName(nombreTarjeta.replace(/[0-9]|[-.@><,:;]/g, ''))
     }
 
     const monthHandler = (event) => {
@@ -29,7 +50,15 @@ const CardCheckout = () => {
     }
 
     const codeHandler = (event) => {
-        setMyCode(event.target.value)
+
+        // Guardar el valor del código
+        let ccv = event.target.value;
+
+        // Solo permitir números en el input
+        ccv = ccv.replace(/[^0-9]/g, '');
+
+        // Cambiar el valor
+        setMyCode(ccv);
     }
 
     /* Turn Button / Form */
@@ -119,7 +148,7 @@ const CardCheckout = () => {
 
             <div className="grupo">
                 <label for="inputNumero">Credit / Debit Card Number</label>
-                <input value={number} onChange={numberHandler} type="text" id="inputNumero" maxlength="16" autocomplete="off" />
+                <input value={number.replace(/\s/g, '')} onChange={numberHandler} type="text" id="inputNumero" maxlength="19" autocomplete="off" />
             </div>
 
             <div className="grupo">
