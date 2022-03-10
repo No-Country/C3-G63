@@ -31,7 +31,7 @@ export function App() {
             <Route path="/ingreso" element={<SignIn />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/ingreso" element={<SignIn />} />
-            <Route path="/moneda" element={<Moneda />} />
+            <Route path="/moneda/:name_moneda" element={<Moneda />}/>
           </Routes>
         </Suspense>
       </Layout>
