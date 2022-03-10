@@ -35,7 +35,7 @@ const Cards = ({ data }) => {
                 </div>
               </div>
               <div className={styles.btnCtn}>
-                <button onClick={() => navigate("/moneda")} className={styles.btnPrimary}>Comprar</button>
+                <button onClick={() => navigate("/acreditar")} className={styles.btnPrimary}>Comprar</button>
                 <button className={styles.btnSecondary}>Vender </button>
               </div>
             </div>
