@@ -82,6 +82,8 @@ $text-color-light: #FFFFFF;
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+
+
 .profile__container {
     display: flex;
     flex-direction: column;
@@ -95,7 +97,10 @@ $text-color-light: #FFFFFF;
     border-radius: 10px;
     align-items: flex-start;
     top: 63px;
-    left: 43px;
+    left: 423px;
+    @media screen and (max-width: 767px) {
+        left: 43px;
+        }
     h1 {
         font-size: 24px;
         color: $main-color;
