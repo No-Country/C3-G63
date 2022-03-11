@@ -5,7 +5,6 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Chart from "react-apexcharts";
-import { Link } from "react-router-dom";
 import { Context } from "../../../store/auth-context";
 import { doc, setDoc, getDoc, updateDoc } from 'firebase/firestore'
 

@@ -180,6 +180,13 @@ $tiny-font-size: 0.6rem;
   cursor: pointer;
   border: none;
   outline: inherit;
-  background-color: $main-color;
+  background-color: $text-color-light;
+  @media screen and (max-width: 767px) {
+    background-color: $main-color;
+    &:active {
+      background-color: $text-color-light;
+    }
+    }
+  
 }
 
