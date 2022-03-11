@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "../../../Components/api/apicrypto";
 import { Link } from "react-router-dom";
 import "./TablaRegistro.scss";
+import { Context } from "../../../store/auth-context";
 
 const TablaRegistro = () => {
   const [data, setData] = useState([]);
+  const context = useContext(Context)
+  console.log("contexto" + context.user)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,7 +44,7 @@ const TablaRegistro = () => {
               return (
                 <div key={el.name} className="table__container">
                   <div className="cryptoCtn">
-                    <img src={el.logo} alt={el.name} />
+                  <Link to={`/moneda/${el.name}`}><img src={el.logo} alt={el.name} /></Link>
                     <div className="r1 c3">{el.name}</div>
                   </div>
                   
