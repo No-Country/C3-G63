@@ -63,11 +63,13 @@
 
 .btnPrimary {
   background-color: #f6aa47;
+  
 }
 
 .btnPrimary:hover {
   background-color: #ffffff;
   border: 1px solid #000000;
+  cursor: pointer;
 }
 
 .btnSecondary {
@@ -77,6 +79,7 @@
 .btnSecondary:hover {
   background-color: #ffffff;
   border: 1px solid #000000;
+  cursor: pointer;
 }
 
 /* MEDIA QUERIES */
