@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import './Moneda.scss';
 import flecha from '../../../Images/flecha.png';
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Chart from "react-apexcharts";
@@ -223,6 +223,7 @@ export const MonedaView = (props) => {
         </div>
         
         <div className='btn-vent'>
+
           <button className = "btn btn-compra" onClick={getDocument}>
             <Link to="/acreditar">Compra</Link>
           </button>
@@ -261,7 +262,7 @@ export const MonedaView = (props) => {
 
             {/* Imagen de flecha */}
             <div className='noticias-images'>
-              <img src={flecha} alt="arrow" />
+              <Link to={`/noticias`}><img src={flecha} alt="arrow" /></Link>
             </div>
           </div>
         </div>
