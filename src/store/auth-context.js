@@ -7,7 +7,7 @@ import {
   FacebookAuthProvider,
   signInWithPopup,
   onAuthStateChanged,
-  signOut
+  signOut,
 } from "@firebase/auth";
 import { auth, db } from "../firebase";
 

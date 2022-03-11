@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Cards.module.css";
 import { optionsCard } from "../../helper/chart";
 import Chart from "react-apexcharts";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Cards = ({ data }) => {
   const navigate = useNavigate(
@@ -35,8 +35,8 @@ const Cards = ({ data }) => {
                 </div>
               </div>
               <div className={styles.btnCtn}>
-                <button onClick={() => navigate("/acreditar")} className={styles.btnPrimary}>Comprar</button>
-                <button className={styles.btnSecondary}>Vender </button>
+                <button onClick={() => navigate("/acreditar")} className={styles.btnPrimary}><Link to={`/acreditar`}>Comprar</Link></button>
+                <button className={styles.btnSecondary}><Link to={`/acreditar`}>Vender</Link></button>
               </div>
             </div>
         );

@@ -9,6 +9,12 @@ const Header = () => {
   const { user, logout } = useContext(Context);
   const [toggleProfile, setToggleProfile] = useState(false);
 
+  
+  
+  
+  
+  
+
   const handleLogout = async () => {
     try {
       await logout();

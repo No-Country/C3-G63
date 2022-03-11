@@ -5,6 +5,14 @@ import Home from "../Home/Home";
 import Checkout from "../components/Checkout/Checkout";
 import FormEmail from "../components/SignUp/FormEmail";
 import LoginEmail from "../components/Login/LoginEmail";
+import ErrorPage from "../../Pages/ErrorPage";
+import InputBusqueda from '../components/Header/InputBusqueda';
+import Mercado from '../components/Mercado/Mercado';
+
+
+
+
+
 
 
 const Login = lazy(() => import('../components/Login/Login'));
@@ -31,7 +39,11 @@ export function App() {
             <Route path="/ingreso" element={<SignIn />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/ingreso" element={<SignIn />} />
-            <Route path="/moneda/:name_moneda" element={<Moneda />}/>
+            <Route path="/moneda/:name_moneda" element={<Moneda />} />
+            <Route path="/input" element={<InputBusqueda />} />
+            <Route path="/mercado" element={<Mercado />} />
+            
+            
           </Routes>
         </Suspense>
       </Layout>
