@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <div className="container logoBox">
       <div className="logoIcon">
-        <img src={logo} alt="logo" />
+        <img src="/iso.png" alt="logo" />
       </div>
       <div className="logo_name">
         <h1>Login</h1>

@@ -7,7 +7,7 @@ const SignUp = () => {
   return (
     <div className="signupCtn">
       <div className="logoIcon">
-        <img src={logo} alt="logo" />
+        <img src="/iso.png" alt="logo" />
       </div>
       <div className="logo_box_info">
         <Link to={`/registroemail`}>

@@ -8,7 +8,7 @@ const SignIn = () => {
   return (
     <div className="signinCtn">
       <div className="logoIcon">
-        <img src={logo} alt="logo" />
+        <img src="/iso.png" alt="logo" />
       </div>
       <div className="btnCtn">
         <NavLink to={`/login`}>
