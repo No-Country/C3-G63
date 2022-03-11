@@ -10,7 +10,7 @@ const Checkout = () => {
 
   return (
     <div>
-        <CardCheckout name_moneda={{ name_moneda: name_moneda }}/>
+        <CardCheckout name_moneda={ name_moneda }/>
     </div>
   )
 }
