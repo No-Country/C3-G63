@@ -30,7 +30,7 @@ const CardCheckout = (props) => {
         let numTarjetaFormateado = numTarjeta.replace(/.{4}/g, '$& ');
 
         // Eliminar los "trailing spaces" si hay más de 19 caracteres
-        if (numTarjetaFormateado.length > 19) {
+        if (numTarjetaFormateado.length > 16) {
             numTarjetaFormateado = numTarjetaFormateado.trim()
         }
 
@@ -151,7 +151,7 @@ const CardCheckout = (props) => {
 
             <div className="grupo">
                 <label for="inputNumero">Credit / Debit Card Number</label>
-                <input value={number.replace(/\s/g, '')} onChange={numberHandler} type="text" id="inputNumero" maxlength="19" autocomplete="off" />
+                <input value={number.replace(/\s/g, '')} onChange={numberHandler} type="text" id="inputNumero" maxlength="16" autocomplete="off" />
             </div>
 
             <div className="grupo">
