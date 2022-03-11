@@ -179,9 +179,9 @@ const CardCheckout = (props) => {
                 {/* TARJETA DELANTERA */}
                 <div className="delantera">
                     <div className="logo-marca">
-                        <img src="visa.png" alt="logo visa" />
+                        <img src="/visa.png" alt="logo visa" />
                     </div>
-                    <img src="chip-tarjeta.png" className="chip" alt="chip tarjeta" />
+                    <img src="/chip-tarjeta.png" className="chip" alt="chip tarjeta" />
 
                     <div className="datos">
                         <div className="grupo" id="numero">

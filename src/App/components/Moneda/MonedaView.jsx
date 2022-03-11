@@ -346,7 +346,15 @@ export const MonedaView = (props) => {
             {/* Texto de la noticia */}
             <div className="noticias-text">
               <h1>Noticias</h1><br />
-              <p id='p-noti'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit voluptates ex unde hic iste corrupti nostrum incidunt fuga asperiores, totam voluptatibus dolorum itaque quasi blanditiis, pariatur veritatis sed est natus corporis? Vero, minus quisquam veritatis quibusdam officiis, quod blanditiis pariatur accusamus dolores iure ab facere!</p>
+              <p id='p-noti'>
+              La subida del precio de un activo digital rara vez surge de la nada.
+          Antes de que el valor de mercado del token se dispare, entran en
+          acción algunas fuerzas colaterales. El activo puede atraer
+          repentinamente una atención en línea anormalmente alta, su volumen de
+          operaciones puede aumentar drásticamente, o puede hacerse pública
+          alguna información que mueva el mercado y desencadene los dos primeros
+          ejemplos.
+              </p>
             </div>
 
             {/* Imagen de flecha */}
