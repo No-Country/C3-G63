@@ -9,7 +9,7 @@ import {
   onAuthStateChanged,
   signOut,
 } from "@firebase/auth";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 
 export const Context = createContext();
 
@@ -43,5 +43,5 @@ export const AuthProvider = ({ children }) => {
     })
   }, []);
 
-  return <Context.Provider value={{ signup, login, loginWithGoogle, loginWithFacebook, logout, user }}>{children}</Context.Provider>;
+  return <Context.Provider value={{ signup, login, loginWithGoogle, loginWithFacebook, logout, user, db }}>{children}</Context.Provider>;
 };
