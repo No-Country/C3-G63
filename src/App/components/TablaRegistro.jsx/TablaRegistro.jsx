@@ -5,6 +5,7 @@ import "./TablaRegistro.scss";
 import { Context } from "../../../store/auth-context";
 
 const TablaRegistro = () => {
+  
   const [data, setData] = useState([]);
   const context = useContext(Context)
   console.log("contexto" + context.user)
@@ -31,7 +32,6 @@ const TablaRegistro = () => {
     };
     fetchData();
   }, []);
-  console.log(data);
 
   return (
     <div>
@@ -52,7 +52,7 @@ const TablaRegistro = () => {
                     <i className="fas fa-chart-line fa-2x"></i>
                   </div>
                   <div className="r1 c5 down">
-                    <i class="fas fa-angle-double-down fa-2x"></i>
+                    <i className="fas fa-angle-double-down fa-2x"></i>
                   </div>
                   <div className="r1 c6">${el.price}</div>
                   <div className="r1 c8 magic">

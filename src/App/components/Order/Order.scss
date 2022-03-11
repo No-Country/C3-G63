@@ -1,0 +1,110 @@
+// Mixin: Fast ease
+@mixin transition-ease {
+    transition: all 0.2s ease-in-out;
+}
+
+// Target the main div or order
+.order {
+
+    // Resets H1
+    h1 {
+        display: block;
+        position: static;
+    }
+
+    // Color
+    background-color: rgb(243, 243, 243);
+
+    // Font
+    font-family: "Titillium Web";
+    font-size: 1.3rem;
+
+    // Flex settings
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // Margen y padding
+    margin: 0 20%;
+    padding: 2.5rem;
+
+    // Forma
+    border-radius: 20px;
+
+    // Header
+    &__header {
+
+        // Centrar elementos
+        text-align: center;
+
+        img {
+            border-radius: 100%;
+            background-color: gray;
+            padding: 5%;
+            aspect-ratio: 1;
+        }
+
+    }
+    
+
+    // Lista de Pagos
+    &__pagos {
+
+        // Centrado de texto
+        text-align: center;
+
+        // Margen y padding
+        margin-top: 2rem;
+
+        // Gastos
+        .pagos__elemento {
+            
+            // Flex settings
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            // Margen y padding
+            margin-top: 1rem;
+
+            select {
+                -webkit-appearance: none;
+            
+                option: {
+                    font-size: 1.3rem;
+                }
+            }
+
+        }
+
+    }
+
+    // Comprar Ahora
+    button {
+
+        // Resets
+        border: none;
+        font-size: 1.3rem;
+
+        // Color
+        background-color: #ffc374;
+
+        // Botón largo
+        width: 100%;
+
+        // Forma
+        border-radius: 10px;
+
+        // Padding y margen
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        padding: 1.5rem 0;
+
+        @include transition-ease;
+        &:hover {
+            background-color: #f6aa47;
+            transform: scale(1.01);
+        }
+    }
+
+}
