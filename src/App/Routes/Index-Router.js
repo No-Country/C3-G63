@@ -12,7 +12,7 @@ const SignIn = lazy(() => import('../components/SignIn/SignIn'));
 const SignUp = lazy(() => import('../components/SignUp/SignUp'));
 const WalletPage = lazy(() => import('../../Pages/Wallet/WalletPage'));
 const Moneda = lazy(() => import('../components/Moneda/Moneda'));
-const NoMatch = lazy(() => import('../components/NoMatch/NoMatch'));
+// const NoMatch = lazy(() => import('../components/NoMatch/NoMatch'));
 const Acreditar = lazy(() => import('../components/Acreditar/acreditar'));
 
 export function App() {
@@ -32,17 +32,17 @@ export function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/acreditar" element={<ProtectedRoute><Acreditar /></ProtectedRoute>} />
+            <Route path="/acreditar/:name_moneda" element={<ProtectedRoute><Acreditar /></ProtectedRoute>} />
             <Route path="/portfolio" element={<ProtectedRoute><WalletPage /></ProtectedRoute>} />
             <Route path="/login" element={<Login />} />
             <Route path="/registro" element={<SignUp />} />
             <Route path="/registroemail" element={<FormEmail />} />
             <Route path="/logincorreo" element={<LoginEmail />} />
             <Route path="/ingreso" element={<SignIn />} />
-            <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
+            <Route path="/checkout/:name_moneda" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
             <Route path="/ingreso" element={<SignIn />} />
             <Route path="/moneda/:name_moneda" element={<ProtectedRoute><Moneda /></ProtectedRoute>}/>
-            <Route path="*" element={<NoMatch />}/>
+            {/* <Route path="*" element={<NoMatch />}/> */}
           </Routes>
         </Suspense>
       </Layout>

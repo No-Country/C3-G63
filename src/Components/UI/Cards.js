@@ -18,7 +18,10 @@ const Cards = ({ data }) => {
                   <img src={el.logo} />
                   <p>{el.name}</p>
                 </div>
-                <p className={styles.price}>${el.price}</p>
+                <p className={styles.price}>
+                  ${el.price} <br />
+                  QTY: {el.quantity}
+                </p>
                 <div className={styles.graph}>
                   <Chart
                     options={optionsCard}

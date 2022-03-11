@@ -35,7 +35,7 @@ $tiny-font-size: 0.6rem;
 
 .section__title {
     width: 100%;
-    font-size: 1.75rem;
+    font-size: 2rem;
     color: $main-color;
     text-align: center;
     padding: 5px;
@@ -53,8 +53,6 @@ $tiny-font-size: 0.6rem;
 .table {
     background: #fff;
     width: 100%;
-    height: auto;
-    max-height: 700px;
     max-width: 700px;
     min-width: 290px;
     padding: 10px;

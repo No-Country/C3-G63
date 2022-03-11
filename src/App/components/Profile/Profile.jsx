@@ -1,24 +1,48 @@
-import React, {useContext} from 'react'
+import React, { useContext, useState } from 'react'
 import { Context } from '../../../store/auth-context'
 import './Profile.scss'
+import { doc, getDoc } from 'firebase/firestore';
+import { useEffect } from "react";
 
 const Profile = () => {
 
-    const {user} = useContext(Context)
+    const { user, db } = useContext(Context);
+    const [userData, setUserData] = useState({fondos: 0});
 
-  return (
+    useEffect(() => {
+
+        // Obtener los datos del usuario
+        const getDocument = async () => {
+
+            const docRef = doc(db, "user_profile", user.uid);
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+                setUserData(docSnap.data());
+            }
+            else {
+                setUserData({fondos: 0});
+            }
+
+        }
+
+        getDocument();
+
+    }, [db, user]);
+
+    return (
         <div className="profile__container">
-                <h1>Profile</h1>
-              <p>Name / Last Name</p>
-              <h3>{user?.displayName}</h3>
-              <p>Email</p>
-              <h3>{user?.email}</h3>
-              <p>Cellphone number</p>
-              {user?.phoneNumber ? <h3>{ user?.phoneNumber }</h3> : <h3>Phone number not found</h3> }
-              <p>Transaction Limit</p>
-              <h3>u$d 2.000</h3>
-            </div>
-  )
+            <h1>Profile</h1>
+            <p>Name / Last Name</p>
+            <h3>{user?.displayName}</h3>
+            <p>Email</p>
+            <h3>{user?.email}</h3>
+            <p>Cellphone number</p>
+            {user?.phoneNumber ? <h3>{user?.phoneNumber}</h3> : <h3>Phone number not found</h3>}
+            <p>Transaction Limit</p>
+            <h3>$ {userData.fondos}</h3>
+        </div>
+    )
 }
 
 export default Profile

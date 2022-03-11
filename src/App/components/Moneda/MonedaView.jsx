@@ -5,7 +5,6 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Chart from "react-apexcharts";
-import { Link } from "react-router-dom";
 import { Context } from "../../../store/auth-context";
 import { doc, setDoc, getDoc, updateDoc } from 'firebase/firestore'
 
@@ -225,10 +224,10 @@ export const MonedaView = (props) => {
         <div className='btn-vent'>
 
           <button className = "btn btn-compra" onClick={getDocument}>
-            <Link to="/acreditar">Compra</Link>
+            <Link to={`/acreditar/${name_moneda}`}>Compra</Link>
           </button>
           <button className = "btn btn-venta" onClick={updateDocument}>
-            <Link to="/acreditar">Venta</Link>
+            <Link to="/portfolio">Venta</Link>
           </button>
           
         </div>
@@ -243,7 +242,7 @@ export const MonedaView = (props) => {
                   <p>{item.name}</p>
                 </div>
                 <div className="Moneda__item__number">
-                  <h2>{item.number}</h2>
+                  <h2>{ Math.floor(Math.random() * 500) }</h2>
                 </div>
               </div>
             );

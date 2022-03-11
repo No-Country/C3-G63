@@ -2,7 +2,10 @@ import {React, useState} from 'react';
 import './CardCheckout.scss';
 
 
-const CardCheckout = () => {
+const CardCheckout = (props) => {
+
+    const { name_moneda } = props;
+    console.log(name_moneda);
 
     const [number, setNumber] = useState("")
     const [buttonTurned, setButtonTurned] = useState(true)
@@ -203,7 +206,7 @@ const CardCheckout = () => {
                 </div>
             </div>
 
-            <button type="submit" className="btn-enviar">Enviar</button>
+            <button type="submit" className="btn-enviar" onClick={ 20 } >Enviar</button>
             </form>
         </div>
     );

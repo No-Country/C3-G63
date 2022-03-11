@@ -1,32 +1,59 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import axios from "../../Components/api/apicrypto"
 import Cards from '../../Components/UI/Cards';
 import styles from "./WalletPage.module.css"
+import { Context } from '../../store/auth-context';
+import { doc, getDoc, where } from 'firebase/firestore';
 
 const WalletPage = () => {
+
     const [data, setData] = useState([]);
+    const { user, db } = useContext(Context);
 
     useEffect(() => {
-        const fetchData = async () => {
-            const fetchedData = await axios.get("https://nc-g63-default-rtdb.firebaseio.com/crypto.json");
-            
-            const loadedCrypto = [];
 
-            for (const key in fetchedData.data) {
-                loadedCrypto.push({
-                    name: fetchedData.data[key].name,
-                    low: fetchedData.data[key].low,
-                    mid: fetchedData.data[key].mid,
-                    high: fetchedData.data[key].high,
-                    logo: fetchedData.data[key].logo,
-                    price: fetchedData.data[key].price,
+        const filterData = async () => {
+
+            let outputData = [];
+
+            // Data de firebase JSON
+            const fetchedData = await axios.get("https://nc-g63-default-rtdb.firebaseio.com/crypto.json");
+
+            // Obtener monedas del usuario
+            const docRef = doc(db, "user_profile", user.uid);
+            const docSnap = await getDoc(docRef);
+
+            // Filtrar la "data" dependiendo de las monedas del usuario
+            if (docSnap.exists()) {
+
+                // Extraer los datos de monedas tanto de la DB como 
+                const userData = docSnap.data().monedas;
+                const dbData = fetchedData.data;
+
+                // Itera sobre cada moneda del usuario
+                userData.forEach( (coin, idx) => {
+
+                    // Extraer los datos de la moneda de utilizando los nombres
+                    // de las monedas del usuario. La información es luego agregada
+                    // a un array.
+                    outputData.push(dbData[coin.name.toLowerCase()]);
+
+                    // Se agrega la cantidad de monedas compradas por el usuario
+                    outputData[idx]["quantity"] = coin.quantity;
+
                 })
+
+                setData(outputData);
             }
-            setData(loadedCrypto);
-            
+            else {
+                console.log("Error: Data not available.");
+            }
+               
         }
-        fetchData()
-    }, [])
+
+        filterData();
+
+    }, [user, db])
 
     return (
         <>
