@@ -8,7 +8,29 @@ Proyecto creado utilizando React (Javascript) como front-end y Firebase como bac
 
 El proyecto puede ser accesado a través del siguiente [link a Heroku](https://ecrypt-nc-g63.herokuapp.com/)
 
-----
+## Equipo
+Eduardo Arevalo: Front End 
+- [Linkedin](https://www.linkedin.com/in/eduardo-arevalo-/)
+- [GithUb](https://github.com/Edu568)
+
+Tomás Kleinschuster: Front End
+- [Linkedin](https://www.linkedin.com/in/kleinschuster-tomas/)
+- [Github](https://github.com/TomasKleinschuster)
+
+Eduardo Santizo: Full Stack
+- [Linkedin](https://gt.linkedin.com/in/eduardo-santizo-olivet-81b802139)
+- [Github](https://github.com/eddysanoli)
+
+Guido Greco: Front End
+- [Linkedin](https://www.linkedin.com/in/guido-greco14)
+- [Github](https://github.com/malks14)
+
+Arleys Manzanares Gatica: FrontEnd
+- [Linkedin](https://www.linkedin.com/in/arleys-gatica16/)
+- [Github](https://github.com/ArleysGatica)
+
+
+
 
 ## Estructura de Carpetas
 

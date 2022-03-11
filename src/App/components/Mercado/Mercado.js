@@ -1,7 +1,7 @@
 import React, {useEffect, useState}  from 'react'
 import axios from "../../../Components/api/apicrypto"
 import CardsMercado from './CardsMercado';
-import './mercado.scss'
+import './mercado.module.scss'
 
 
 const Mercado = () => {
