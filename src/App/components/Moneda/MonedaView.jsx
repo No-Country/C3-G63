@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import './Moneda.scss';
 import flecha from '../../../Images/flecha.png';
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Chart from "react-apexcharts";
@@ -11,6 +11,9 @@ import { doc, setDoc, getDoc, updateDoc } from 'firebase/firestore'
 export const MonedaView = (props) => {
 
   const { array } = props;
+
+  // Redirección desde javascript
+  const navigate = useNavigate();
 
   // Parametros de URL
   const { name_moneda } = useParams();
@@ -67,6 +70,93 @@ export const MonedaView = (props) => {
 
     if (docSnap.exists()) {
       console.log("Document data: ", docSnap.data());
+    }
+    else {
+      console.log("Error: No document found!")
+    }
+
+  }
+
+  // ===================
+  // COMPRA / VENTA HANDLES
+  // ===================
+
+  const handleCompra = (event) => {
+    navigate(`/acreditar/${name_moneda}`);
+  }
+
+  const handleVenta = async (event) => {
+
+    // Evitar que haga submit al form
+    event.preventDefault();
+
+    // Se obtiene la data de todas las cryptos
+    const fetchedData = await axios.get("https://nc-g63-default-rtdb.firebaseio.com/crypto.json");
+
+    // Precio de la moneda a comprar
+    let coinPrice = fetchedData.data[name_moneda.toLowerCase()].price;
+
+    // Convierte el precio en un número si está dado por un string
+    if (typeof coinPrice == "string") {
+
+      // Intercambio: Si tiene ambos caracteres
+      if (coinPrice.includes(".") && coinPrice.includes(",")) {
+        coinPrice = coinPrice.replace(/[.,]/g, (element) => element === ',' ? '.' : ',');
+      }
+
+      // Reemplazo: Si solo incluye coma
+      else if (!coinPrice.includes(".") && coinPrice.includes(",")) {
+        coinPrice = coinPrice.replace(/[,]/g, '.');
+      }
+
+      // Eliminación comas
+      coinPrice = Number(coinPrice.replace(/[,]/g, ''));
+
+    }
+
+    // Datos del usuario
+    const docRef = doc(db, "user_profile", context.user.uid);
+    const docSnap = await getDoc(docRef);
+
+    // Se extraen los datos útiles
+    if (docSnap.exists()) {
+
+      // Se extraen las monedas y los fondos del usuario
+      const fondos = docSnap.data().fondos;
+      const monedas = docSnap.data().monedas;
+
+      // Se revisa si el usuario tiene la moneda
+      let userOwnsCoin = false;
+      let coinIdx = -1;
+      monedas.forEach((moneda, idx) => {
+        if (moneda.name === name_moneda) {
+          userOwnsCoin = true;
+          coinIdx = idx;
+        }
+      })
+
+      // Se agrega la moneda al inventario del usuario
+      if (userOwnsCoin) {
+        monedas[coinIdx].quantity -= 1;
+
+        // Se intenta actualizar el documento
+        try {
+          await updateDoc(doc(db, "user_profile", context.user.uid), {
+            fondos: fondos + coinPrice,
+            monedas: monedas
+          })
+
+          // Se redirige al portafolio
+          navigate("/portfolio");
+        }
+        catch (err) {
+          console.log(err);
+        }
+      }
+      else {
+        console.log("Error: Trying to sell a coin that the user doesnt have");
+      }
+
     }
     else {
       console.log("Error: No document found!")
@@ -223,11 +313,11 @@ export const MonedaView = (props) => {
         
         <div className='btn-vent'>
 
-          <button className = "btn btn-compra" onClick={getDocument}>
-            <Link to={`/acreditar/${name_moneda}`}>Compra</Link>
+          <button className = "btn btn-compra" onClick={handleCompra}>
+            Compra
           </button>
-          <button className = "btn btn-venta" onClick={updateDocument}>
-            <Link to="/portfolio">Venta</Link>
+          <button className = "btn btn-venta" onClick={handleVenta}>
+            Venta
           </button>
           
         </div>
