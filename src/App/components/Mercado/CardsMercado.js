@@ -1,15 +1,12 @@
 import React from 'react'
 import { optionsCard } from "../../../helper/chart";
 import Chart from "react-apexcharts";
-import { useNavigate } from "react-router-dom";
 import "./CardsMercado.module.scss"
 
 
 
  const CardsMercado = ({ data }) => {
-  const navigate = useNavigate(
-
-  )
+  
   return (
     <div className="container">
       {data.map((el) => {

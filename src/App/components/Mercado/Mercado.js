@@ -1,7 +1,7 @@
 import React, {useEffect, useState}  from 'react'
 import axios from "../../../Components/api/apicrypto"
 import CardsMercado from './CardsMercado';
-import {} from './mercado.scss'
+import './mercado.scss'
 
 
 const Mercado = () => {
@@ -30,7 +30,7 @@ const Mercado = () => {
     }, [])
     return (
         <>
-        <div className="">
+        <div className="walletCtn">
             {/*<h1>Portfolio</h1>*/}
             <CardsMercado data={data} />
             

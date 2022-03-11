@@ -4,27 +4,27 @@ const Moneda = () => {
   const array = [
     {
       id: 1,
-      name: 'Desempeño',
+      name: 'Subida',
       number: 500,
     },
     {
       id: 2,
-      name: 'Inteligencia',
+      name: 'Bajada',
       number: 20,
     },
     {
       id: 3,
-      name: 'Sabiduria',
+      name: 'Expectativa',
       number: 30,
     },
     {
       id: 4,
-      name: 'Agilidad',
+      name: 'Internacional',
       number: 300,
     },
     {
       id: 5,
-      name: 'Vision',
+      name: 'Local',
       number: 10,
     },
   ];

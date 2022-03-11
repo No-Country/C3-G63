@@ -53,7 +53,7 @@ const TablaRegistro = () => {
                   </div>
                   <div className="r1 c6">${el.price}</div>
                   <div className="r1 c8 magic">
-                    <Link to={`/acreditar`}>Buy</Link>
+                    <Link to={`/moneda/${el.name}`}>Buy</Link>
                   </div>
                 </div>
               );

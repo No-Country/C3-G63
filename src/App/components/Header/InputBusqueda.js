@@ -33,7 +33,7 @@ const InputBusqueda = () => {
 
   const handleChange=e=>{
     setBusqueda(e.target.value);
-    console.log("busqueda: "+e.targett.value)
+    filtrar("busqueda: "+e.target.value)
   }
   
   const filtrar=(terminoBusqueda)=>{

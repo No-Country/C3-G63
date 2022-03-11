@@ -80,6 +80,7 @@
     .btn-venta {
       background-color: #f6aa47;
       transition: all 0.3s ease-in-out;
+      cursor: pointer;
 
       &:hover {
         background-color: #ff9100;
@@ -89,6 +90,7 @@
     .btn-compra {
       background: #c4c4c4;
       transition: all 0.3s ease-in-out;
+      cursor: pointer;
 
       &:hover {
         background: #8b8b8b;

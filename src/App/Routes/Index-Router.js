@@ -13,6 +13,8 @@ import Mercado from '../components/Mercado/Mercado';
 
 
 
+
+
 const Login = lazy(() => import('../components/Login/Login'));
 const SignIn = lazy(() => import('../components/SignIn/SignIn'));
 const SignUp = lazy(() => import('../components/SignUp/SignUp'));
@@ -37,9 +39,11 @@ export function App() {
             <Route path="/ingreso" element={<SignIn />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/ingreso" element={<SignIn />} />
-            <Route path="/moneda" element={<Moneda />} />
+            <Route path="/moneda/:name_moneda" element={<Moneda />} />
             <Route path="/input" element={<InputBusqueda />} />
             <Route path="/mercado" element={<Mercado />} />
+            
+            
           </Routes>
         </Suspense>
       </Layout>

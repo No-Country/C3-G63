@@ -12,11 +12,13 @@
     align-items: center;
     height: 200px;
     justify-content: space-evenly;
+    
 }
 
 .acreditarCtn__info h2 {
     color: #009640;
     font-size: 30px;
+    
 }
 
 .acreditarCtn__info button {
@@ -30,4 +32,8 @@
     color: rgba(255, 255, 255, 0.9);
     font-weight: 700;
     font-size: 15px;
+}
+
+button{
+    cursor: pointer;
 }
